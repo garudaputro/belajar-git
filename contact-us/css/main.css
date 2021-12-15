@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* a {
+  text-decoration: none !important;
+}
+
+.container-info {
+  padding: 2em 1em;
+  height: 100vh !important;
+}
+
+.container-info .header .photo {
+  height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-info .header .photo img {
+  height: 100px;
+}
+
+.container-info .header .text-header {
+  text-align: center;
+  color: #432e2d;
+  font-size: 20px;
+}
+
+.container-info .contact-info {
+  margin: 2em 1em;
+}
+
+.container-info .contact-info i {
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.container-info .contact-info a.btn-contact {
+  margin: 0.5em 0;
+  color: #fff;
+  text-align: center;
+  background-color: #f7931e;
+  padding: 1em;
+  text-align: center;
+  border-radius: 16px;
+}
+
+@media (min-width: 768px) {
+  .container-info .contact-info a.btn-contact {
+    margin: 0.5em;
+  }
+}
+
+.container-info .contact-info a.btn-contact svg {
+  margin-right: 7px;
+}
+
+.container-info footer p,
+.container-info footer a {
+  font-size: 12px;
+  display: inline;
+}
+/*# sourceMappingURL=main.css.map */

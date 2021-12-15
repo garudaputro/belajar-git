@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- font awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"
+    integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- popup yt -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+
+  <!-- main style -->
+  <link rel="stylesheet" href="/css/main.css">
+  <title>eunoya | happy wedding happy life</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-211678698-1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-211678698-1');
+  </script>
+</head>
+
+
+<body>
+
+  <!-- loader -->
+  <div class="loader-bg">
+    <div id="loader">
+      <div id="shadow"></div>
+      <div id="box"></div>
+    </div>
+  </div>
+
+  <!-- nav mobile -->
+  <nav class="nav-mobile d-md-none">
+    <div class="container">
+      <ul>
+        <li class="selector-hero-section active"><a href="#selector-hero-section">
+            <svg viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M19.2017 22.2804C19.2017 20.6857 17.895 19.3884 16.2897 19.3884H12.435C10.8417 19.3991 9.54299 20.6951 9.54299 22.2804V26.1404C9.52699 26.2137 9.51766 26.2911 9.51766 26.3684C9.51766 26.7204 9.22433 27.0071 8.86299 27.0071H6.29766C4.29499 27.0071 2.66699 25.3991 2.66699 23.4231V11.8137C2.67366 11.1217 2.99766 10.4817 3.57499 10.0431L12.3057 3.03774C13.4897 2.1004 15.1403 2.1004 16.3203 3.03507L25.111 10.0457C25.667 10.4711 25.991 11.1111 26.0003 11.7911V23.4231C26.0003 25.3991 24.3723 27.0071 22.3697 27.0071H19.8283C19.4763 26.9991 19.2017 26.7244 19.2017 26.3817V22.2804ZM19.8043 29.0071H22.3697C25.475 29.0071 28.0003 26.5017 28.0003 23.4231V11.7764C27.983 10.4671 27.3723 9.25641 26.3417 8.47107L17.5657 1.47107C15.651 -0.046262 12.9777 -0.0462619 11.059 1.47374L2.34566 8.46707C1.29099 9.26574 0.680326 10.4791 0.666992 11.8044V23.4231C0.666992 26.5017 3.19232 29.0071 6.29766 29.0071H8.86299C10.2297 29.0071 11.3577 27.9751 11.5017 26.6551C11.5297 26.5644 11.543 26.4684 11.543 26.3684V22.2804C11.543 21.7924 11.9497 21.3911 12.4417 21.3884H16.2897C16.7923 21.3884 17.2017 21.7884 17.2017 22.2804V26.3817C17.2017 27.8191 18.335 28.9724 19.8043 29.0071ZM11.5 13C10.6716 13 10 13.6716 10 14.5C10 15.3284 10.6716 16 11.5 16H16.5C17.3284 16 18 15.3284 18 14.5C18 13.6716 17.3284 13 16.5 13H11.5Z"
+                fill="#FBC98F" />
+            </svg>
+          </a></li>
+        <li class="selector-why-us"><a href="#selector-why-us">
+            <svg viewBox="0 0 29 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14.4109" cy="12.4109" r="11.4109" stroke="#FBC98F" stroke-width="2" />
+              <path
+                d="M27.4319 28.8805L23.4068 20.6289C23.4068 20.6289 21.6626 22.3061 20.1531 23.1447C18.6437 23.9832 16.7988 24.4193 16.7988 24.4193L19.9183 32L22.1992 27.3711L27.4319 28.8805Z"
+                stroke="#FBC98F" stroke-width="2" stroke-linejoin="round" />
+              <path
+                d="M0.999692 28.8805L5.02485 20.6289C5.02485 20.6289 6.76908 22.3061 8.27852 23.1447C9.78795 23.9832 11.6328 24.4193 11.6328 24.4193L8.51332 32L6.23239 27.3711L0.999692 28.8805Z"
+                stroke="#FBC98F" stroke-width="2" stroke-linejoin="round" />
+              <path
+                d="M17.54 13.5986C17.4173 13.7175 17.361 13.8894 17.3889 14.058L17.81 16.3884C17.8455 16.5859 17.7622 16.7858 17.5969 16.8999C17.4349 17.0183 17.2194 17.0326 17.0427 16.9378L14.9449 15.8437C14.8719 15.8048 14.7909 15.784 14.708 15.7816H14.5797C14.5352 15.7883 14.4916 15.8025 14.4518 15.8243L12.3535 16.9236C12.2498 16.9757 12.1323 16.9942 12.0172 16.9757C11.7368 16.9227 11.5497 16.6555 11.5957 16.3737L12.0172 14.0433C12.0452 13.8733 11.9888 13.7004 11.8661 13.5796L10.1558 11.9218C10.0127 11.7831 9.963 11.5747 10.0284 11.3866C10.0918 11.199 10.2538 11.0622 10.4494 11.0314L12.8035 10.6899C12.9825 10.6714 13.1398 10.5625 13.2203 10.4014L14.2576 8.27472C14.2822 8.22735 14.314 8.18378 14.3523 8.14683L14.395 8.11368C14.4172 8.08905 14.4428 8.06868 14.4712 8.0521L14.5228 8.03316L14.6034 8H14.8028C14.9809 8.01847 15.1376 8.12504 15.2196 8.28419L16.2706 10.4014C16.3464 10.5563 16.4937 10.6638 16.6638 10.6899L19.0178 11.0314C19.2167 11.0598 19.383 11.1972 19.4488 11.3866C19.5109 11.5766 19.4574 11.785 19.3115 11.9218L17.54 13.5986Z"
+                fill="#FBC98F" />
+            </svg>
+          </a></li>
+        <li class="selector-why-us"><a href="#selector-why-us">
+            <svg viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.26994 3.29289C5.66047 2.90237 6.29363 2.90237 6.68416 3.29289L9.3508 5.95954L9.45817 6.06691C9.6715 4.33826 11.1453 3 12.9316 3H21.9316C23.3339 3 24.5436 3.82466 25.1021 5.01547C29.141 5.25512 31.3707 8.23982 31.4304 11.2732C31.4612 12.8392 30.9141 14.4291 29.7403 15.6305C28.6824 16.7134 27.1728 17.4229 25.2679 17.561C24.8185 18.9753 23.4948 20 21.9316 20H12.9316C11.2578 20 9.85843 18.825 9.51326 17.2549C7.47655 17.8908 6.46587 19.6184 6.43254 21.3125C6.41129 22.393 6.78819 23.4495 7.55356 24.2329C8.04171 24.7326 8.7176 25.1511 9.61302 25.3849C10.0786 23.9987 11.3885 23 12.9316 23H21.9316C23.5775 23 24.958 24.136 25.3318 25.6666H27.2295L26.2699 24.7071C25.8794 24.3166 25.8794 23.6834 26.2699 23.2929C26.6605 22.9024 27.2936 22.9024 27.6842 23.2929L30.3508 25.9595L31.0579 26.6666L30.3508 27.3738L27.6842 30.0404C27.2936 30.4309 26.6605 30.4309 26.2699 30.0404C25.8794 29.6499 25.8794 29.0167 26.2699 28.6262L27.2295 27.6666H25.2325C24.752 29.026 23.4556 30 21.9316 30H12.9316C11.3178 30 9.95904 28.9077 9.55438 27.4221C8.13401 27.1403 6.98021 26.508 6.12296 25.6305C4.94923 24.4291 4.40213 22.8392 4.43293 21.2732C4.48716 18.5162 6.33402 15.7993 9.70263 15.1473C10.2317 13.886 11.4782 13 12.9316 13H21.9316C23.5358 13 24.8879 14.0792 25.3015 15.5513C26.6841 15.4159 27.6621 14.8958 28.3097 14.2329C29.0751 13.4495 29.452 12.393 29.4307 11.3125C29.3925 9.37027 28.0697 7.38397 25.3888 7.04924C25.1253 8.72132 23.6778 10 21.9316 10H12.9316C11.2451 10 9.83715 8.80709 9.50556 7.219L9.3508 7.37375L6.68416 10.0404C6.29363 10.4309 5.66047 10.4309 5.26994 10.0404C4.87942 9.64988 4.87942 9.01671 5.26994 8.62619L6.22948 7.66665H2.43164C1.87936 7.66665 1.43164 7.21893 1.43164 6.66665C1.43164 6.11436 1.87936 5.66665 2.43164 5.66665H6.22948L5.26994 4.70711C4.87942 4.31658 4.87942 3.68342 5.26994 3.29289ZM12.9316 5H21.9316C22.7601 5 23.4316 5.67157 23.4316 6.5C23.4316 7.32843 22.7601 8 21.9316 8H12.9316C12.1032 8 11.4316 7.32843 11.4316 6.5C11.4316 5.67157 12.1032 5 12.9316 5ZM21.9316 15H12.9316C12.1032 15 11.4316 15.6716 11.4316 16.5C11.4316 17.3284 12.1032 18 12.9316 18H21.9316C22.7601 18 23.4316 17.3284 23.4316 16.5C23.4316 15.6716 22.7601 15 21.9316 15Z"
+                fill="#FBC98F" />
+            </svg>
+
+          </a></li>
+
+        <li class="selector-section-our-services"><a href="#selector-section-our-services">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.33366 17.3333C13.759 17.3333 14.0003 19.1733 14.0003 23C14.0003 24.9173 14.0003 26.2813 13.195 27.28C12.2683 28.4307 10.5817 28.6667 8.33366 28.6667C6.08566 28.6667 4.39899 28.4307 3.47233 27.28C2.66699 26.2813 2.66699 24.9187 2.66699 23.0333L3.66699 23H2.66699C2.66699 19.1733 2.90833 17.3333 8.33366 17.3333ZM23.0003 17.3333C28.4257 17.3333 28.667 19.1733 28.667 23C28.667 24.9173 28.667 26.2813 27.8617 27.28C26.935 28.4307 25.2483 28.6667 23.0003 28.6667C20.7523 28.6667 19.0657 28.4307 18.139 27.28C17.3337 26.2813 17.3337 24.9187 17.3337 23.0333L18.3337 23H17.3337C17.3337 19.1733 17.575 17.3333 23.0003 17.3333ZM8.60854 19.3339L8.33366 19.3333C4.85503 19.3333 4.67664 19.5829 4.66749 22.5027L4.66805 23.6402C4.67437 24.8015 4.71861 25.6404 5.02833 26.0267C5.38166 26.464 6.43099 26.6667 8.33366 26.6667C10.2363 26.6667 11.2857 26.4627 11.639 26.0253C12.0003 25.576 12.0003 24.5093 12.0003 23.032C12.0003 19.6984 12.0003 19.3496 8.60854 19.3339ZM23.2752 19.3339L23.0003 19.3333C19.5217 19.3333 19.3433 19.5829 19.3342 22.5027L19.3347 23.6402C19.341 24.8015 19.3853 25.6404 19.695 26.0267C20.0483 26.464 21.0977 26.6667 23.0003 26.6667C24.903 26.6667 25.9523 26.4627 26.3057 26.0253C26.667 25.576 26.667 24.5093 26.667 23.032C26.667 19.6984 26.667 19.3496 23.2752 19.3339ZM8.33366 2.66666C13.759 2.66666 14.0003 4.50666 14.0003 8.33332C14.0003 10.2507 14.0003 11.6147 13.195 12.6133C12.2683 13.764 10.5817 14 8.33366 14C6.08566 14 4.39899 13.764 3.47233 12.6133C2.66699 11.6147 2.66699 10.252 2.66699 8.36666L3.66699 8.33332H2.66699C2.66699 4.50666 2.90833 2.66666 8.33366 2.66666ZM23.0003 2.66666C28.4257 2.66666 28.667 4.50666 28.667 8.33332C28.667 10.2507 28.667 11.6147 27.8617 12.6133C26.935 13.764 25.2483 14 23.0003 14C20.7523 14 19.0657 13.764 18.139 12.6133C17.3337 11.6147 17.3337 10.252 17.3337 8.36666L18.3337 8.33332H17.3337C17.3337 4.50666 17.575 2.66666 23.0003 2.66666ZM8.60854 4.66725L8.33366 4.66666C4.85503 4.66666 4.67664 4.91628 4.66749 7.83606L4.66805 8.97356C4.67437 10.1348 4.71861 10.9737 5.02833 11.36C5.38166 11.7973 6.43099 12 8.33366 12C10.2363 12 11.2857 11.796 11.639 11.3587C12.0003 10.9093 12.0003 9.84266 12.0003 8.36532C12.0003 5.03172 12.0003 4.68295 8.60854 4.66725ZM23.2752 4.66725L23.0003 4.66666C19.5217 4.66666 19.3433 4.91628 19.3342 7.83606L19.3347 8.97356C19.341 10.1348 19.3853 10.9737 19.695 11.36C20.0483 11.7973 21.0977 12 23.0003 12C24.903 12 25.9523 11.796 26.3057 11.3587C26.667 10.9093 26.667 9.84266 26.667 8.36532C26.667 5.03172 26.667 4.68295 23.2752 4.66725Z"
+                fill="#FCD09D" />
+              <rect x="19" y="19" width="8" height="8" fill="#FCD09D" />
+            </svg>
+
+          </a></li>
+        <li class="chat"><a href="https://wa.me/6285156959757?text=Halo Eunoya, saya mau konsultasi wedding invitation">
+            <svg viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M14.6643 0.33374C18.4949 0.33374 22.0949 1.82307 24.7989 4.52841C30.3883 10.1177 30.3883 19.2111 24.7989 24.8004C22.0589 27.5417 18.3696 28.9924 14.6323 28.9924C12.5949 28.9924 10.5443 28.5617 8.62559 27.6737C8.06026 27.4471 7.53092 27.2337 7.15092 27.2337C6.71359 27.2364 6.12559 27.4391 5.55759 27.6351C4.39226 28.0351 2.94159 28.5337 1.86826 27.4644C0.798924 26.3937 1.29226 24.9471 1.68959 23.7831C1.88559 23.2097 2.08692 22.6177 2.08692 22.1697C2.08692 21.8017 1.90959 21.3324 1.63759 20.6564C-0.859743 15.2631 0.294924 8.76307 4.53092 4.52974C7.23492 1.82441 10.8336 0.33374 14.6643 0.33374ZM14.6656 2.33374C11.3683 2.33374 8.27092 3.61641 5.94426 5.94441C2.29892 9.58707 1.30692 15.1804 3.47359 19.8644C3.78559 20.6364 4.08692 21.3884 4.08692 22.1697C4.08692 22.9497 3.81892 23.7351 3.58292 24.4284C3.38826 24.9991 3.09359 25.8604 3.28292 26.0497C3.46826 26.2417 4.33492 25.9391 4.90692 25.7431C5.59359 25.5084 6.37226 25.2391 7.14426 25.2337C7.91759 25.2337 8.64692 25.5271 9.41892 25.8377C14.1483 28.0244 19.7416 27.0297 23.3856 23.3871C28.1936 18.5764 28.1936 10.7511 23.3856 5.94307C21.0576 3.61507 17.9616 2.33374 14.6656 2.33374ZM19.9281 13.884C20.6641 13.884 21.2615 14.48 21.2615 15.2173C21.2615 15.9547 20.6641 16.5507 19.9281 16.5507C19.1921 16.5507 18.5895 15.9547 18.5895 15.2173C18.5895 14.48 19.1801 13.884 19.9161 13.884H19.9281ZM14.5831 13.884C15.3191 13.884 15.9164 14.48 15.9164 15.2173C15.9164 15.9547 15.3191 16.5507 14.5831 16.5507C13.8471 16.5507 13.2444 15.9547 13.2444 15.2173C13.2444 14.48 13.8337 13.884 14.5711 13.884H14.5831ZM9.23746 13.884C9.97346 13.884 10.5708 14.48 10.5708 15.2173C10.5708 15.9547 9.97346 16.5507 9.23746 16.5507C8.50146 16.5507 7.89879 15.9547 7.89879 15.2173C7.89879 14.48 8.48946 13.884 9.22546 13.884H9.23746Z"
+                fill="#FBC98F" />
+            </svg>
+          </a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- nav desktop -->
+  <nav class="container navbar navbar-desktop navbar-expand-lg navbar-expand-md d-none d-md-block">
+    <div class="container px-4">
+      <a class="navbar-brand" href="#selector-hero-section"><img src="assets/img-logo.svg" alt="" class="brand">
+      </a>
+      <ul class="navbar-nav justify-content-end">
+        <li class="nav-item selector-hero-section active-desktop">
+          <a class="nav-link" aria-current="page" href="#selector-hero-section">Home</a>
+        </li>
+        <li class="nav-item selector-why-us">
+          <a class="nav-link" href="#selector-why-us">Why us</a>
+        </li>
+        <li class="nav-item selector-section-our-way">
+          <a class="nav-link" href="#selector-section-our-way">How its work</a>
+        </li>
+        <li class="nav-item selector-section-our-services">
+          <a href="#selector-section-our-services" class="nav-link">Our Services</a>
+        </li>
+        <a class="btn-contact-us"
+          href="https://wa.me/6285156959757?text=Halo Eunoya, saya mau konsultasi wedding invitation"> <svg width="20"
+            height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M10.0016 0C12.675 0 15.1874 1.03939 17.0745 2.92741C20.9752 6.82813 20.9752 13.1743 17.0745 17.075C15.1622 18.9881 12.5875 20.0005 9.97927 20.0005C8.55744 20.0005 7.1263 19.7 5.78729 19.0802C5.39275 18.9221 5.02334 18.7732 4.75814 18.7732C4.45293 18.775 4.04257 18.9165 3.64617 19.0533C2.8329 19.3324 1.8205 19.6804 1.07143 18.9342C0.325157 18.1869 0.669448 17.1773 0.946742 16.365C1.08353 15.9649 1.22404 15.5517 1.22404 15.2391C1.22404 14.9822 1.10028 14.6547 0.910452 14.1829C-0.832406 10.419 -0.0265781 5.88273 2.92967 2.92834C4.81676 1.04032 7.32822 0 10.0016 0ZM10.0025 1.39577C7.70136 1.39577 5.53977 2.29093 3.91602 3.91561C1.37199 6.45779 0.679684 10.3613 2.19177 13.6302C2.40951 14.169 2.61981 14.6938 2.61981 15.2391C2.61981 15.7834 2.43278 16.3315 2.26808 16.8154C2.13222 17.2136 1.92658 17.8147 2.05871 17.9469C2.18805 18.0809 2.79289 17.8696 3.19208 17.7329C3.67129 17.5691 4.21472 17.3811 4.75349 17.3774C5.29319 17.3774 5.80218 17.5821 6.34095 17.7989C9.64149 19.325 13.545 18.6308 16.0881 16.0886C19.4436 12.7313 19.4436 7.27013 16.0881 3.91468C14.4634 2.29 12.3028 1.39577 10.0025 1.39577ZM13.6752 9.45656C14.1888 9.45656 14.6057 9.8725 14.6057 10.3871C14.6057 10.9017 14.1888 11.3176 13.6752 11.3176C13.1615 11.3176 12.7409 10.9017 12.7409 10.3871C12.7409 9.8725 13.1532 9.45656 13.6668 9.45656H13.6752ZM9.94493 9.45656C10.4586 9.45656 10.8754 9.8725 10.8754 10.3871C10.8754 10.9017 10.4586 11.3176 9.94493 11.3176C9.43129 11.3176 9.01069 10.9017 9.01069 10.3871C9.01069 9.8725 9.42198 9.45656 9.93656 9.45656H9.94493ZM6.2143 9.45656C6.72795 9.45656 7.14482 9.8725 7.14482 10.3871C7.14482 10.9017 6.72795 11.3176 6.2143 11.3176C5.70066 11.3176 5.28007 10.9017 5.28007 10.3871C5.28007 9.8725 5.69228 9.45656 6.20593 9.45656H6.2143Z"
+              fill="#f9b362" />
+          </svg>
+          Say Hi</a>
+
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- hero section -->
+    <section class="hero-section" id="selector-hero-section">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 right">
+          <img class=" stagger1 pb-3" src="/assets/img-hero-illustration.png" alt="">
+        </div>
+        <div class="col-md-6 col-sm-12 left">
+          <div class="headline ">
+            <h1 class="stagger1">buat <span> mereka iri</span> dengan
+              undangan pernikahan mu</h1>
+            <p class="stagger1">
+              Eunoya membuat undangan yang unik, berkesan dan kekinian dengan design undangan yang di
+              buat berdasarkan cerita cinta mu
+            </p>
+          </div>
+          <div class="btn-cta ">
+            <div class="btn-cta-primary stagger1">
+              <a href="https://wa.me/62882020363263?text=Hallo eunoya">buat sekarang</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- why eunoya -->
+    <section class="why-us-section" id="selector-why-us" data-aos="fade-up" data-aos-duration="1500"
+      data-aos-anchor-placement="top-bottom">
+      <div class="container">
+        <div class="header-text mb-3">
+          <h3>why <span>eunoya</span> </h3>
+        </div>
+        <div class="owl-one owl-carousel owl-theme ">
+          <div class="why-us">
+            <div class="icon">
+              <img src="/assets/ic_memoriable.svg" alt="">
+            </div>
+            <div class="desc">
+              <h4>memoriabel design</h4>
+              <p>memastikan desain kami beda dari yang lain dan sesuai dengan cerita cinta kamu
+              </p>
+            </div>
+          </div>
+          <div class="why-us">
+            <div class="icon">
+              <img src="/assets/ic_chat.svg" alt="">
+
+            </div>
+            <div class="desc">
+              <h4>desain berdasarkan cerita </h4>
+              <p>kepuasan customer adalah prioritas kami
+            </div>
+          </div>
+          <div class="why-us">
+            <div class="icon">
+              <img src="/assets/ic_trend.svg" alt="">
+            </div>
+            <div class="desc">
+              <h4>desain trend</h4>
+              <p>memadukan desain yang sedang trand saat ini dengan style kamu
+              </p>
+            </div>
+          </div>
+          <div class="why-us">
+            <div class="icon">
+              <img src="/assets/ic_kelas_dunia.svg" alt="">
+            </div>
+            <div class="desc">
+              <h4>desainer berpengalaman</h4>
+              <p>team berpengalaman yang sudah menyelsaikan banyak desain dengan kualitas dunia
+              </p>
+            </div>
+          </div>
+          <div class="why-us">
+            <div class="icon">
+              <img src="/assets/ic_jam.svg" alt="">
+            </div>
+            <div class="desc">
+              <h4>on-time adalah kami</h4>
+              <p>berkomitmen untuk bekerja dengan cepat, efesien dan sesuai dengan deadline yang telah ditentukan
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- our way -->
+    <section class="section-our-way" id="selector-section-our-way" data-aos="fade-up" data-aos-duration="1500"
+      data-aos-anchor-placement="top-bottom">
+      <div class="header-text" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500">
+        <h3>let's getting started</h3>
+
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="our-way one" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+            <div class="illustration ">
+              <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_btsljppl.json" background="transparent"
+                speed="1" loop autoplay></lottie-player>
+            </div>
+            <div class="desc">
+              <h4 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"> disccuss</h4>
+              <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"> ceritakan cerita cintamu, biar
+                kami yang merubah nya menjadi desain
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="our-way two" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+            <div class="illustration">
+              <lottie-player class="illustration-2" src="https://assets1.lottiefiles.com/packages/lf20_8c2t0vml.json"
+                background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+            <div class="desc">
+              <h4 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"> designing</h4>
+              <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"> mulai membuat desain system yang
+                sesuai dengan cerita cinta mu
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="our-way three" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+            <div class="illustration">
+              <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_t7u2btdc.json" background="transparent"
+                speed="1" loop autoplay></lottie-player>
+            </div>
+            <div class="desc">
+              <h4 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500"> action</h4>
+              <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500"> wedding invitation mulai di kerjakan
+                setelah semua sesuai dengan mu
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- our services -->
+    <section class="section-our-services" id="selector-section-our-services" data-aos="fade-up" data-aos-duration="1500"
+      data-aos-anchor-placement="top-bottom">
+      <div class="container">
+        <div class="header-text" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500">
+          <h3>Our services</h3>
+        </div>
+        <div class="service web-wedding row">
+          <div class="col-md-6 col-sm-12 left align-self-center" data-aos="fade-up" data-aos-delay="50"
+            data-aos-duration="1500">
+            <div class="header-text">
+              <h1> website wedding invitation </h1>
+              <p>buat undangan pernikahan mu hanya dengan copy link undangan, menghemat ratusan ribu dan
+                dapatkan banyak fitur-fitur menariknya </p>
+              <div class="btn-view-more">
+                <a class="see-more">
+                  <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">see more</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 right" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+            <div class="owl-three owl-carousel owl-theme">
+              <div class="card-product ">
+                <div class="card-body ">
+                  <div class="card-img">
+                    <img src="assets/img_tema_floral.png" alt="">
+                  </div>
+                  <div class="nama-tema">
+                    <h3>tema floral</h3>
+                    <span> - 25%</span>
+                  </div>
+                  <div class="harga">
+                    <h3>Rp 75.000</h3>
+                    <span>Rp 100.000</span>
+                  </div>
+                  <div class="btn-card">
+                    <div class="btn-pilih-tema">
+                      <a
+                        href="https://wa.me/62882020363263?text=Hallo eunoya, saya mau pesan web invitation wedding  dengan tema floral">pilih
+                        tema</a>
+                    </div>
+                    <div class="btn-lihat-tema">
+                      <a href="https://eunoya.id/tema-floral/">lihat
+                        tema</a>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-product ">
+                <div class="card-body ">
+
+                  <div class="card-img">
+
+                    <img src="assets/img_tema_rustic.png" alt="">
+                  </div>
+
+                  <div class="nama-tema">
+                    <h3>tema Rustic</h3>
+                    <span>- 25%</span>
+                  </div>
+                  <div class="harga">
+                    <h3>Rp 67.500</h3>
+                    <span>Rp 90.000</span>
+                  </div>
+                  <div class="btn-card">
+                    <div class="btn-pilih-tema">
+                      <a
+                        href="https://wa.me/62882020363263?text=Hallo eunoya, saya mau pesan web invitation weddingdengan tema rustic">pilih
+                        tema</a>
+                    </div>
+                    <div class="btn-lihat-tema">
+                      <a href="https://eunoya.id/tema-rustic/">lihat
+                        tema</a>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service video-invitation row">
+          <div class="header-text col-md-6 col-sm-12 left align-self-center " data-aos="fade-up" data-aos-delay="50"
+            data-aos-duration="1500">
+            <div class="header-text">
+              <h1>video wedding invitation </h1>
+              <p>sebar undangan cukup dengan share video undangan mu yang wah ini, ngak perlu lagi buat undangan yang
+                merepotkan </p>
+            </div>
+            <div class="btn-view-more">
+              <a class="see-more">
+                <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">see more</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 right " data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+            <div class="owl-three owl-carousel owl-theme">
+              <div class="card-product">
+                <div class="card-body ">
+
+                  <div class="card-img">
+                    <a href="https://www.youtube.com/watch?v=GA3nWu79cwI" class="popup-youtube">
+                      <img src="assets/ic_play.png" alt="" class="btn-play">
+                    </a>
+                    <img src="assets/img_minimalist_6.png" alt="">
+                  </div>
+
+                  <div class="nama-tema">
+                    <h3>tema minimalist 6</h3>
+                    <span> - 25%</span>
+                  </div>
+                  <div class="harga">
+                    <h3>Rp 37.500</h3>
+                    <span>Rp 50.000</span>
+                  </div>
+                  <div class="btn-card">
+                    <div class="btn-pilih-tema">
+                      <a
+                        href="https://wa.me/62882020363263?text=Hallo eunoya, saya mau pesan video invitation weddingdengan tema minimalist 6">pilih
+                        tema</a>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-product">
+                <div class="card-body ">
+
+                  <div class="card-img">
+                    <a href="https://www.youtube.com/watch?v=EZPA9r_Q2As" class="popup-youtube">
+                      <img src="assets/ic_play.png" alt="" class="btn-play">
+                    </a>
+                    <img src="assets/img_watercolor_2.png" alt="">
+                  </div>
+
+                  <div class="nama-tema">
+                    <h3>tema Black Gold</h3>
+                    <span> - 25%</span>
+                  </div>
+                  <div class="harga">
+                    <h3>Rp 52.500</h3>
+                    <span>Rp 70.000</span>
+                  </div>
+                  <div class="btn-card">
+                    <div class="btn-pilih-tema">
+                      <a
+                        href="https://wa.me/62882020363263?text=Hallo eunoya, saya mau pesan video invitation weddingdengan tema Black Gold">pilih
+                        tema</a>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-product ">
+                <div class="card-body ">
+
+                  <div class="card-img">
+                    <a href="https://www.youtube.com/watch?v=6DjDJ7hC-AQ" class="popup-youtube">
+                      <img src="assets/ic_play.png" alt="" class="btn-play">
+                    </a>
+                    <img src="assets/img_watercolor_1.png" alt="">
+                  </div>
+
+                  <div class="nama-tema">
+                    <h3>tema Rusitc</h3>
+                    <span> - 25%</span>
+                  </div>
+                  <div class="harga">
+                    <h3>Rp 52.500</h3>
+                    <span>Rp 70.000</span>
+                  </div>
+                  <div class="btn-card">
+                    <div class="btn-pilih-tema">
+                      <a
+                        href="https://wa.me/62882020363263?text=Hallo eunoya, saya mau pesan video invitation weddingdengan tema Rustic">pilih
+                        tema</a>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- <div class="service design-invitation row">
+          <div class=" left col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500">
+            <div class="header-text">
+              <h1>design wedding invitation</h1>
+              <p>bosen dengan desain undangan yang begitu-begitu aja dan terkesan monoton? mau undangan kamu beda dari
+                yang lain dan mau di buatkan undangan sesuai cerita cinta kamu? tenang eunoya bisa melakukan itu semua
+                disni</p>
+            </div>
+          </div>
+          <div class="comming-soon  col-md-6 col-sm-12">
+            <h3>comming soon</h3>
+          </div>
+
+        </div> -->
+      </div>
+
+    </section>
+
+    <!-- testimoni -->
+    <section id="section-testimoni" class="section-testimoni" data-aos="fade-up" data-aos-duration="1500"
+      data-aos-anchor-placement="top-bottom">
+      <div class="container">
+        <div class="header-text" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500">
+          <h3>ini cerita mereka</h3>
+        </div>
+        <div class="owl-two owl-carousel owl-theme" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1500">
+          <div class="content">
+            <img src="assets/img_org_testimoni.png" alt="">
+            <h5>Eka wardanah</h5>
+            <p>Terimakasih eunoya undangan sesuai dengan pesanan custom aku, rekomen banget dah &hearts;</p>
+          </div>
+
+          <div class="content">
+            <img src="assets/img_org_testimoni2.png" alt="">
+            <h5>Shinta Febiyansari</h5>
+            <p>Terimakasih eunoya sdh menjadi salah satu bagian utk hari bahagiaku, undangannya suka bgt bisa sesuai dg
+              apa yg aku mau simple tp keren bgt ✨</p>
+          </div>
+
+          <div class="content">
+            <img src="/assets/img-testi-hesti.png" alt="">
+            <h5>hesti nur indah pratiwi</h5>
+            <p>Terimakasiiii eunoya
+              masyaAllah banget undangan digital masakini, aku gasalah pilih tempat desain undangan dikital kak. bener2
+              bisa di fixkan sampai sesuai banget keinginan akuu yang simple to the point aja
+
+              makin canggih semoga berkah eunoyaa</p>
+          </div>
+
+          <div class="content">
+            <img src="/assets/img-testi-mawwadah.png" alt="">
+            <h5>mawaddah</h5>
+            <p>terimakasih banyak eunoya jadi bagian penting di hari kebahagia kami
+              alhamdulillah dilayani dengan sangat baik. ownernya juga super ramah
+              hasilnya juga super kece
+              recommended banget deh pokok nya </p>
+          </div>
+
+          <div class="content">
+            <img src="/assets/img-testi-annisa.png" alt="">
+            <h5>Annisatul Mardiah</h5>
+            <p>terimakasih banyak ya kak sangat puas dengan hasilnya dan sesuai keinginan karena komunikasi yang sangat2
+              baikkkk..... humble bangettt dan makasih banyak sudah menuruti semua req dari kami🙏🏻🙏🏻🙏🏻😍😍</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-faq" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom">
+      <div class="container">
+        <div class="header-text" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500">
+          <h3>FAQ</h3>
+
+        </div>
+
+        <div class="card-faq">
+          <div id="collapseIndicatorExampleOne" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500">
+
+            <div class="card">
+              <a href="#faq-one" class=" collapse-indicator-chevron" id="qna" data-bs-toggle="collapse"
+                aria-expanded="false" aria-controls="faq-one">
+                bagaimana cara memesan web invitation wedding di eunoya?
+              </a>
+              <div id="faq-one" class="collapse" aria-labelledby="qna" data-bs-parent="#collapseIndicatorExampleOne">
+                <div class="card-body">
+                  <p>
+                    - pemesanan dapat di lakukan dengan mehubungi admin via chat dengan menekan tombol icon chat di
+                    bawah
+                    atau tombol "buat sekarang" di halaman utama
+                    dan beritau admin tamplate mana yang kamu suka untuk di jadikan tamplate website wedding invitation
+                    kamu. jika kamu memilih paket custom maka bisa memberitau
+                    admin untuk proses selanjut nya
+                    <br class="mb-3">
+                    - Pemesanan web invitation wedding di sarankan dilakukan paling lambat 2 Minggu sebelum acara
+                    pernikahan di selengarakan
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="collapseIndicatorExampleTwo" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+            <div class="card">
+              <a href="#second-faq" class=" collapse-indicator-chevron" id="headingExampleTwo" data-bs-toggle="collapse"
+                aria-expanded="false" aria-controls="collapseIndicatorChevron">
+                bagaimana cara melakukan pembayaran di eunoya?
+              </a>
+              <div id="second-faq" class="collapse" aria-labelledby="headingExampleTwo"
+                data-bs-parent="#collapseIndicatorExampleTwo">
+                <div class="card-body">
+                  <p>
+                    pembayaran bisa di lakukan dengan mentransfer dengan nominal yang tertera sesuai harga design serta
+                    mengirim bukti transfer setelah melakukan proses pembayaran, pembayaran bisa menyerahkan 50% dari
+                    harga paket yang di pilih setelah itu meluasi sisa pembayaran ketika desain sudah jadi atau bisa
+                    melunasi pembayaran langsung secara penuh
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="collapseIndicatorExampleThree" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1500">
+            <div class="card">
+              <a href="#third-faq" class=" collapse-indicator-chevron" id="headingExampleTwo" data-bs-toggle="collapse"
+                aria-expanded="false" aria-controls="collapseIndicatorChevron">
+                berapa lama proses pembuatan nya ?
+              </a>
+              <div id="third-faq" class="collapse" aria-labelledby="headingExampleTwo"
+                data-bs-parent="#collapseIndicatorExampleThree">
+                <div class="card-body">
+                  <p>
+                    - untuk paket design tamplate proses pembuatan nya membutuhkan waktu 1-2 hari setelah semua
+                    kelengkapan data di penuhi
+
+                    <br class="mb-3">
+                    - untuk paket custom membutuhkan estimasi waktu 1 minggu ( tergantung banyak nya revisi dan banyak
+                    nya
+                    request design ) karena desain berifat custom dan unik serta di desain berdasarkan cerita cinta
+                    kalian
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="collapseIndicatorExampleFour" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+            <div class="card">
+              <a href="#fourth-faq" class=" collapse-indicator-chevron" id="headingExampleTwo" data-bs-toggle="collapse"
+                aria-expanded="false" aria-controls="collapseIndicatorChevron">
+                apakah bisa request fitur di luar dari paket ?
+              </a>
+              <div id="fourth-faq" class="collapse" aria-labelledby="headingExampleTwo"
+                data-bs-parent="#collapseIndicatorExampleFour">
+                <div class="card-body">
+                  <p>
+                    bisa, namun untuk menambahkan fitur selain dari paket yang tersedia akan di kenakan biaya tambahan
+                    di
+                    luar dari harga paket
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div id="collapseIndicatorExampleFifth" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
+                <div class="card">
+                  <a href="#fifth-faq" class=" collapse-indicator-chevron" id="headingExampleTwo" data-bs-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseIndicatorChevron">
+                    apa itu custom domain dan subdomain?
+                  </a>
+                  <div id="fifth-faq" class="collapse" aria-labelledby="headingExampleTwo"
+                    data-bs-parent="#collapseIndicatorExampleFifth">
+                    <div class="card-body">
+                      <p>
+                        kami menyediakan 2 jenis url yang bisa di akses untuk membuka web wedding invitation, free sub-domain
+                        seperti nama-kamu.eunoya.id dan custom domain yang berada di paket custom seperti nama-kamu.com,
+                        domain custom seperti .co.id, .net, .xyz, dan masih banyak lagi
+      
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+          <div id="collapseIndicatorExampleseventh" data-aos="fade-up" data-aos-delay="350" data-aos-duration="1500">
+            <div class="card">
+              <a href="#seventh-faq" class=" collapse-indicator-chevron" id="headingExampleTwo"
+                data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseIndicatorChevron">
+                apakah bisa memilih backsound?
+              </a>
+              <div id="seventh-faq" class="collapse" aria-labelledby="headingExampleTwo"
+                data-bs-parent="#collapseIndicatorExampleseventh">
+                <div class="card-body">
+                  <p>
+                    seperti yang kita tau beberapa music memiliki lisensi hak cipta namun ada juga beberapa music yang
+                    memiliki free lisensi yang arti nya bebas untuk di pakai , karena oleh itu kami sudah menyediakan
+                    list
+                    music background yang bisa kalian lihat disini
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="collapseIndicatorExampleNineth" data-aos="fade-up" data-aos-delay="350" data-aos-duration="1500">
+            <div class="card">
+              <a href="#nineth-faq" class=" collapse-indicator-chevron" id="headingExampleTwo" data-bs-toggle="collapse"
+                aria-expanded="false" aria-controls="collapseIndicatorChevron">
+                apakah bisa custom domain?
+              </a>
+              <div id="nineth-faq" class="collapse" aria-labelledby="headingExampleTwo"
+                data-bs-parent="#collapseIndicatorExampleNineth">
+                <div class="card-body">
+                  <p>
+                    bisa, akan tetapi biaya akan di tambahkan sesuai dengan harga domain yang di pilih
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="collapseIndicatorExampleTenth" data-aos="fade-up" data-aos-delay="350" data-aos-duration="1500">
+            <div class="card">
+              <a href="#Tenth-faq" class=" collapse-indicator-chevron" id="headingExampleTwo" data-bs-toggle="collapse"
+                aria-expanded="false" aria-controls="collapseIndicatorChevron">
+                apakah ganti warna dan font?
+              </a>
+              <div id="Tenth-faq" class="collapse" aria-labelledby="headingExampleTwo"
+                data-bs-parent="#collapseIndicatorExampleTenth">
+                <div class="card-body">
+                  <p>
+                    bisa, sesuai batas revisi dari setiap paket
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="section-footer container-fluid">
+    <div class="content">
+      <div class="row">
+        <div class="text-ajakan col-md-5 col-sm-12">
+          <h1>ayo buat pernikahan mu makin berkesan sekarang!</h1>
+          <div class="btn-cta-primary">
+            <a href="https://wa.me/62882020363263?text=Hallo eunoya">buat sekarang</a>
+          </div>
+        </div>
+        <div class="services col-md-7 col-sm-12">
+          <ul>
+            <li>
+              <div class="bantuan mb-4">
+                <h4>bantuan</h4>
+                <div class="d-flex mb-2 email">
+                  <img src="assets/ic_email.svg" class="align-self-center" alt="">
+                  <a href="#">support@eunoya.id</a>
+                </div>
+                <div class="d-flex mb-2 telpon">
+                  <img src="assets/ic_phone.svg" class="align-self-center" alt="">
+                  <a href="#">+62882020363263</a>
+                </div>
+                <div class="d-flex mb-2 location">
+                  <img src="assets/ic_location.svg" class="align-self-center" alt="">
+                  <a href="#">desa tarjun rt 07 kec.kelumpang hilir, kab. kotabaru</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="ikuti mb-4">
+                <h4>ikuti kami</h4>
+                <!-- <div class="d-flex mb-2 tiktok">
+                      <img src="assets/ic_tiktok.svg" class="align-self-center" alt="">
+                      <a>eunoya.id</a>
+                    </div> -->
+                <div class="d-flex mb-2 instagram">
+                  <img src="assets/ic_instagram.svg" class="align-self-center" alt="">
+                  <a href="https://www.instagram.com/eunoya.id/">eunoya.id</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="produk mb-4">
+                <h4>produk kami</h4>
+                <a href="#">wedding invitation design</a>
+                <a href="#">wedding invitation video</a>
+                <a href="#">wedding invitation illustration</a>
+              </div>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="copyright text-center text-muted mt-3">
+      <p>&copy;2021 eunoya</p>
+    </div>
+  </footer>
+
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <!-- owl caraousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+    integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- popup -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+  <!-- navbar -->
+  <script src="js/navbar.js"></script>
+  <!-- main js -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
