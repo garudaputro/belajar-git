@@ -10,15 +10,14 @@ $(function () {
 
 $(function () {
   $(document).scroll(function () {
-    var $nav = $(".navbar-desktop");
+    var $nav = $(".nav-desktop");
     $nav.toggleClass("scrolled-desktop", $(this).scrollTop() > $nav.height());
   });
 });
 
 // active class while scroll tab bar mobile
-
 const sections = document.querySelectorAll("section");
-const navLi = document.querySelectorAll("nav.nav-mobile .container ul li");
+const navLi = document.querySelectorAll("nav ul li");
 
 window.onscroll = () => {
   var current = "";
@@ -40,22 +39,22 @@ window.onscroll = () => {
 
 
 // desktop navbar
-const sectionsDesktop = document.querySelectorAll("section");
-const navLiDesktop = document.querySelectorAll("nav.navbar-desktop .container ul li");
-window.onscroll = () => {
-  var sekarang = "";
+// const sectionsDesktop = document.querySelectorAll("section");
+// const navLiDesktop = document.querySelectorAll(".navbar-desktop .container ul li");
+// window.onscroll = () => {
+//   var sekarang = "";
 
-  sectionsDesktop.forEach((section) => {
-    const sectionTopDesktop = section.offsetTop;
-    if (scrollY >= sectionTopDesktop - 60) {
-      sekarang = section.getAttribute("id");
-    }
-  });
+//   sectionsDesktop.forEach((section) => {
+//     const sectionTopDesktop = section.offsetTop;
+//     if (scrollY >= sectionTopDesktop - 60) {
+//       sekarang = section.getAttribute("id");
+//     }
+//   });
 
-  navLiDesktop.forEach((li) => {
-    li.classList.remove("active-desktop");
-    if (li.classList.contains(sekarang)) {
-      li.classList.add("active-desktop");
-    }
-  });
-};
+//   navLiDesktop.forEach((li) => {
+//     li.classList.remove("active-desktop");
+//     if (li.classList.contains(sekarang)) {
+//       li.classList.add("active-desktop");
+//     }
+//   });
+// };

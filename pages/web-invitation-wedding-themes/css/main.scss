@@ -5,6 +5,8 @@
 @import "../../../css/colors";
 @import "../../../css/buttons";
 @import "../../../css/navbar";
+@import "../../../css/footer";
+@import "../../../css/card-product";
 
 * {
   padding: 0;
@@ -59,19 +61,26 @@ body {
   z-index: -1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  @include media-breakpoint-up(lg) {
-    height: 18em;
+  @include media-breakpoint-up(md) {
+    height: 16em;
   }
+  align-items: center;
   .text-headline {
     text-align: center;
     margin-top: 2em;
     padding: 0 0.5em;
+    @include media-breakpoint-up(md) {
+      margin-top: 4em;
+    }
     h1 {
       font-weight: 600;
       font-size: 22px;
       color: var(--white);
       text-transform: capitalize;
+      @include media-breakpoint-up(md) {
+        font-size: 28px;
+        padding: 0 1em;
+      }
     }
     p {
       font-size: 14px;
@@ -89,12 +98,13 @@ body {
     bottom: 5%;
     @include media-breakpoint-down(md) {
       width: 60px;
+      right: 0%;
     }
     @include media-breakpoint-up(md) {
       right: 0;
     }
     @include media-breakpoint-up(lg) {
-      right: 15%;
+      right: 5%;
       bottom: 10%;
     }
   }
@@ -106,34 +116,21 @@ body {
       left: -2%;
     }
     @include media-breakpoint-up(lg) {
-      left: 20%;
+      left: 5%;
     }
   }
 }
 
 // global styles
 .header-text {
-  margin: 50px auto;
   text-align: center;
+  margin: 25px;
   position: relative;
+
   h3 {
     text-transform: capitalize;
     font-size: 20px;
     color: var(--header-text-color);
-  }
-
-  .outline {
-    img {
-      position: absolute;
-      width: 70%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      top: 50%;
-      left: 50%;
-      @include media-breakpoint-up(xl) {
-        width: 30% !important;
-      }
-    }
   }
 }
 
@@ -145,7 +142,6 @@ section.our-offer {
   }
   .right {
     .offer {
-      margin-top: 50px;
       .why-us {
         margin-top: 30px;
         background-color: var(--bg-card-color);
@@ -314,7 +310,6 @@ section.wedding-themes {
     li {
       list-style: none;
       background: var(--bg-card-color);
-
       margin: 5px;
       padding: 8px 20px;
       color: var(--primary-color);
@@ -324,7 +319,7 @@ section.wedding-themes {
       -webkit-box-align: center;
       align-items: center;
       display: -webkit-box;
-      border-radius: 4px;
+      border-radius: 8px;
       text-transform: capitalize;
 
       &.active {
@@ -343,460 +338,83 @@ section.wedding-themes {
       margin: 5px;
     }
     .card-product {
-      box-sizing: border-box;
-      border: 1px solid #f2f2f2;
-      background-color: white;
-      box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
-      border-radius: 15px;
-      margin: 1em;
-      width: 390px;
-      padding: 1em;
-
-      @include media-breakpoint-up(md) {
-        width: 326px;
-      }
-      @include media-breakpoint-up(lg) {
-        width: 376px;
-      }
-      .card-body {
-        padding: 0;
-        .card-img {
-          position: relative;
-          a {
-            img.btn-play {
-              position: absolute;
-              width: 60px;
-              height: 60px;
-              z-index: 2;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
-          }
-          img {
-            height: 312px;
-            width: 100%;
-          }
-        }
-        .nama-tema {
-          display: flex;
-          justify-content: space-between;
-          margin: 20px 0;
-
-          h3 {
-            text-transform: capitalize;
-            font-weight: 500;
-            font-size: 25px;
-            color: #432e2d;
-            margin-bottom: 0;
-            @include media-breakpoint-up(md) {
-              font-size: 20px;
-            }
-            @include media-breakpoint-up(lg) {
-              font-size: 25px;
-            }
-          }
-          span {
-            text-transform: capitalize;
-            text-align: center;
-            padding: 5px 10px;
-            border-radius: 4px;
-            color: var(--color-discount);
-            background-color: var(--bg-color-discount);
-            align-self: center;
-            font-size: 14px;
-          }
-        }
-        .harga {
-          display: flex;
-          h3 {
-            font-weight: 600;
-            font-size: 22px;
-            line-height: 27px;
-            text-transform: capitalize;
-            color: #f7931e;
-          }
-          span {
-            margin-left: 10px;
-            margin-top: 3px;
-            font-size: 14px;
-            line-height: 18px;
-            /* identical to box height */
-
-            text-align: center;
-            letter-spacing: 0.05em;
-            text-decoration-line: line-through;
-            text-transform: capitalize;
-
-            color: #b3b0b0;
-          }
-        }
-        .btn-card {
-          display: flex;
-          margin: 1em 0;
-
-          .btn-pilih-tema {
-            a {
-              background-color: #f7931e;
-              padding: 0.6em 1.2em;
-              border-radius: 8px;
-              color: white;
-              margin-right: 10px;
-              text-decoration: none;
-              text-transform: capitalize;
-            }
-          }
-          .btn-lihat-tema {
-            a {
-              text-transform: capitalize;
-              border: 1px solid #f7931e;
-              padding: 0.6em 1.2em;
-              border-radius: 8px;
-              color: #f7931e;
-              margin-right: 10px;
-              text-decoration: none;
-              transition: all ease-in-out 0.3s;
-
-              &:hover {
-                background-color: #f7931e;
-                color: white;
-                transition: all ease-in-out 0.3s;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-footer.section-footer {
-  margin-top: 8em;
-  background-color: var(--bg-card-color);
-  padding: 4em 2em;
-  border-radius: 40px 40px 0 0;
-  position: relative;
-  z-index: 3;
-  bottom: 0;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 120px;
-    height: 150px;
-    z-index: 1;
-    background-image: url(../assets/decorasi_footer.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-top: 120px;
-    bottom: 0;
-    right: 0;
-  }
-
-  .text-ajakan {
-    h1 {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 30px;
-      text-transform: capitalize;
-      color: var(--header-text-color);
-    }
-    .btn-cta-primary {
-      @include btn-cta-primary;
+      @include card-product;
     }
   }
 
-  .services {
-    margin-top: 50px;
-    ul {
-      list-style: none;
-      padding-left: 0px;
-      li {
-        h4 {
-          font-size: 16px;
-          line-height: 27px;
-          color: var(--header-text-color);
-          font-weight: 600;
-          text-transform: capitalize;
-        }
-        a {
-          font-size: 14px;
-          line-height: 21px;
-          color: var(--title-color);
-          margin-bottom: 0;
-          font-weight: 400;
-
-          text-transform: lowercase;
-        }
-        img {
-          height: 15px;
-          margin-right: 10px;
-        }
-      }
-    }
-  }
-  .produk {
-    flex-direction: column;
-    display: flex;
-    a {
-      margin: 0.5em 0;
-    }
-  }
-  .copyright {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 768px) {
-  // global styles
-  .header-text {
-    margin: 50px auto;
-    text-align: center;
+  footer.section-footer {
+    margin-top: 8em;
+    background-color: var(--bg-card-color);
+    padding: 4em 2em;
+    border-radius: 40px 40px 0 0;
     position: relative;
-    h3 {
-      text-transform: uppercase;
-      color: var(--header-text-color);
+    z-index: 3;
+    bottom: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 150px;
+      z-index: 1;
+      background-image: url(../assets/decorasi_footer.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 120px;
+      bottom: 0;
+      right: 0;
     }
 
-    .outline {
-      img {
-        position: absolute;
-        width: 60%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-      }
-    }
-  }
-
-  .bg-top {
-    .text-headline {
-      margin-top: 0;
-      padding: 0 8em;
+    .text-ajakan {
       h1 {
-        font-size: 30px;
-        margin-top: 40px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: capitalize;
+        color: var(--header-text-color);
+      }
+      .btn-cta-primary {
+        @include btn-cta-primary;
       }
     }
-  }
-  .card-services {
-    .card-service {
-      .img-services {
-        height: 470px;
-        width: 290px;
-        margin: auto;
-      }
-    }
-  }
-  .btn-primary {
-    position: absolute;
-    bottom: 8%;
-    transform: translate(-50%);
-    color: #fff;
-    background-color: #c6ad76;
-    border-color: #c6ad76;
-    padding: 0.6em 1.8em !important;
-    border-radius: 8px;
 
-    a {
-      color: #fff;
-    }
-  }
+    .services {
+      ul {
+        list-style: none;
+        padding-left: 0px;
+        li {
+          h4 {
+            font-size: 16px;
+            line-height: 27px;
+            color: var(--header-text-color);
+            font-weight: 600;
+            text-transform: capitalize;
+          }
+          a {
+            font-size: 14px;
+            line-height: 21px;
+            color: var(--title-color);
+            margin-bottom: 0;
+            font-weight: 400;
 
-  .card-video-container {
-    padding: 13em 6em 0em;
-  }
-
-  // offer
-  section.our-offer {
-    .header-text {
-      .outline {
-        img {
-          width: 50%;
-        }
-      }
-    }
-  }
-
-  // pricelist
-  section.section-pricelist {
-    .header-text {
-      .outline {
-        img {
-          width: 50%;
-        }
-      }
-    }
-  }
-
-  // card themes
-  section.wedding-themes {
-    .product {
-      .card-product {
-        .card-img {
+            text-transform: lowercase;
+          }
           img {
-            height: 290px !important;
+            height: 15px;
+            margin-right: 10px;
           }
         }
       }
     }
-  }
-
-  // footer
-  footer.section-footer {
-    .content {
-      .text-ajakan {
-        align-self: center;
-      }
-      .services {
-        ul {
-          justify-content: space-evenly;
-          display: flex;
-          list-style: none;
-
-          li {
-            max-width: 200px;
-            margin: 0 20px;
-          }
-        }
+    .produk {
+      flex-direction: column;
+      display: flex;
+      a {
+        margin: 0.5em 0;
       }
     }
-  }
-}
-
-@media (min-width: 992px) {
-  .header-text {
-    h3 {
-      font-size: 25px !important;
-    }
-  }
-  .bg-top {
-    .text-headline {
-      padding: 0 8em;
-      h1 {
-        font-size: 35px;
-        margin-top: 40px;
-      }
-      p {
-        padding: 0 8em;
-      }
-    }
-  }
-  .card-services {
-    .card-service {
-      .img-services {
-        height: 470px;
-        width: 290px;
-        margin: auto;
-      }
-    }
-  }
-  .btn-primary {
-    position: absolute;
-    bottom: 8%;
-    transform: translate(-50%);
-    color: #fff;
-    background-color: #c6ad76;
-    border-color: #c6ad76;
-    padding: 0.6em 1.8em !important;
-    border-radius: 8px;
-
-    a {
-      color: #fff;
-    }
-  }
-
-  .card-video-container {
-    padding: 18em 10em 0em;
-  }
-
-  // pricelist
-  section.section-pricelist {
-    .header-text {
-      .outline {
-        img {
-          width: 20% !important;
-        }
-      }
-    }
-    .wrap-card {
-      .card {
-        margin: 20px 50px;
-      }
-    }
-  }
-
-  // footer
-  footer.section-footer {
-    .content {
-      .text-ajakan {
-        align-self: center;
-      }
-      .services {
-        ul {
-          justify-content: space-evenly;
-          display: flex;
-          list-style: none;
-
-          li {
-            max-width: 200px;
-            margin: 0 20px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  // global styles
-  .header-text {
-    .outline {
-      img {
-        position: absolute;
-        width: 30%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-      }
-    }
-  }
-
-  .card-video-container {
-    padding: 15em 15em 0em;
-
-    .card-video-promosi {
-      min-height: 400px;
-    }
-  }
-
-  // offer
-  section.our-offer {
-    .right {
-      .offer {
-        .why-us {
-          max-width: 500px;
-          margin: 50px;
-        }
-      }
-    }
-  }
-
-  section.section-pricelist {
-    .header-text {
-      .outline {
-        img {
-          width: 20%;
-        }
-      }
-    }
-  }
-
-  footer.section-footer {
-    .content {
-      padding: 0 5em;
+    .copyright {
+      font-size: 12px;
     }
   }
 }

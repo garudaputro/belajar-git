@@ -137,8 +137,7 @@
 
 :root {
   --primary-color: #f7931e;
-  --second-bg-color: #ffe5c6;
-  --bg-card-color: #fff3e6;
+  --bg-card-color: #fef4e9;
   --header-text-color: #432e2d;
   --title-color: #695857;
   --color-discount: #ea4c4c;
@@ -165,67 +164,52 @@
   border: 1px solid #f9f9f9;
 }
 
-.nav-mobile .container {
-  padding: 1rem;
-  position: relative;
+.nav-mobile ul {
+  margin-bottom: 0;
+  padding: 1em 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.nav-mobile .container ul {
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.nav-mobile .container ul li {
+.nav-mobile ul li {
   display: inline-block;
   border-radius: 5px;
 }
 
-.nav-mobile .container ul li a {
+.nav-mobile ul li a {
   display: inline-block;
   text-decoration: none;
   padding: 10px 25px;
 }
 
 @media (max-width: 575.98px) {
-  .nav-mobile .container ul li a {
+  .nav-mobile ul li a {
     padding: 5px 10px;
   }
 }
 
-.nav-mobile .container ul li a svg {
+.nav-mobile ul li a svg {
   height: 32px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   stroke-width: 0.3;
 }
 
-.nav-mobile .container ul li a svg path {
+.nav-mobile ul li a svg path {
   stroke: #fbc98f;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.nav-mobile .container ul li a svg path:hover {
+.nav-mobile ul li a svg path:hover {
   fill: var --primary-color;
   stroke: var --primary-color;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-
-.nav-mobile .container ul li.active {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.nav-mobile .container ul li.active svg path {
-  fill: var(--primary-color);
-  stroke: var(--primary-color);
 }
 
 .nav-mobile.scrolled {
@@ -236,7 +220,7 @@
           box-shadow: 0px 30px 40px rgba(88, 88, 88, 0.1);
 }
 
-.navbar-desktop {
+.nav-desktop {
   -webkit-box-shadow: none;
           box-shadow: none;
   position: fixed;
@@ -251,28 +235,28 @@
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-desktop a.navbar-brand img.brand {
+.nav-desktop a.navbar-brand img.brand {
   max-width: 120px;
 }
 
-.navbar-desktop ul li.active-desktop a {
+.nav-desktop ul li.active-desktop a {
   color: var(--primary-color);
 }
 
-.navbar-desktop ul li a {
+.nav-desktop ul li a {
   color: #695857;
   font-size: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.navbar-desktop ul li a:hover {
+.nav-desktop ul li a:hover {
   color: var(--primary-color);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.navbar-desktop ul a.btn-contact-us {
+.nav-desktop ul a.btn-contact-us {
   font-size: 14px;
   background-color: #fef6ee;
   border: 1px solid #f9b362;
@@ -284,30 +268,134 @@
   transition: all 0.2s ease-in-out;
 }
 
-.navbar-desktop ul a.btn-contact-us svg {
+.nav-desktop ul a.btn-contact-us svg {
   margin-right: 2px;
 }
 
-.navbar-desktop ul a.btn-contact-us:hover {
+.nav-desktop ul a.btn-contact-us:hover {
   color: white;
   background-color: var(--primary-color);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.navbar-desktop ul a.btn-contact-us:hover svg path {
+.nav-desktop ul a.btn-contact-us:hover svg path {
   fill: #fff;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.navbar-desktop.scrolled-desktop {
+.nav-desktop.scrolled-desktop {
   background-color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-box-shadow: 0px 30px 40px rgba(88, 88, 88, 0.1);
           box-shadow: 0px 30px 40px rgba(88, 88, 88, 0.1);
   z-index: 999;
+}
+
+.nav-mobile ul li.active,
+.nav-desktop ul li.active {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav-mobile ul li.active a,
+.nav-desktop ul li.active a {
+  color: var(--primary-color);
+}
+
+.nav-mobile ul li.active a svg path,
+.nav-desktop ul li.active a svg path {
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+}
+
+footer.section-footer {
+  margin-top: 100px;
+  background-color: var(--bg-card-color);
+  border-radius: 24px 24px 0 0;
+  display: relative;
+  z-index: 3;
+}
+
+footer.section-footer .text-ajakan h1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: capitalize;
+  color: var(--header-text-color);
+  margin-bottom: 1em;
+}
+
+footer.section-footer .text-ajakan .btn-cta-primary {
+  padding: 12px 28px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  width: 11em;
+  text-align: center;
+}
+
+footer.section-footer .text-ajakan .btn-cta-primary a {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: var(--white);
+}
+
+footer.section-footer .services {
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  footer.section-footer .services {
+    margin-top: 0;
+  }
+}
+
+footer.section-footer .services ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+footer.section-footer .services ul li h4 {
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--header-text-color);
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+footer.section-footer .services ul li a {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--title-color);
+  margin-bottom: 0;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+footer.section-footer .services ul li img {
+  height: 15px;
+  margin-right: 10px;
+}
+
+footer.section-footer .produk {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer.section-footer .produk a {
+  margin: 0.5em 0;
+}
+
+footer.section-footer .copyright {
+  font-size: 12px;
 }
 
 * {
@@ -886,9 +974,9 @@ section.section-our-way .our-way .desc p {
 }
 
 .section-our-services .service .card-product .card-body .btn-card .btn-lihat-tema a {
-  background-color: var(--secondary-color);
+  background-color: var(--bg-card-color);
   text-transform: capitalize;
-  padding: 0.6em 1.8em;
+  padding: 0.7em 2em;
   border-radius: 8px;
   color: var(--primary-color);
   margin-right: 10px;
@@ -1090,100 +1178,6 @@ section.section-faq .card-faq .card .card-body p {
   line-height: 21px;
   text-transform: lowercase;
   color: var(--title-color);
-}
-
-footer.section-footer {
-  margin-top: 100px;
-  background-color: var(--bg-card-color);
-  padding: 4em 2em;
-  border-radius: 24px 24px 0 0;
-  display: relative;
-  z-index: 3;
-}
-
-@media (min-width: 768px) {
-  footer.section-footer {
-    padding: 4em 2em 1em;
-  }
-}
-
-footer.section-footer .text-ajakan h1 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  text-transform: capitalize;
-  color: var(--header-text-color);
-  margin-bottom: 1em;
-}
-
-footer.section-footer .text-ajakan .btn-cta-primary {
-  padding: 12px 28px;
-  background-color: var(--primary-color);
-  border-radius: 8px;
-  width: 11em;
-  text-align: center;
-}
-
-footer.section-footer .text-ajakan .btn-cta-primary a {
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: capitalize;
-  color: var(--white);
-}
-
-footer.section-footer .services {
-  margin-top: 50px;
-}
-
-@media (min-width: 768px) {
-  footer.section-footer .services {
-    margin-top: 0;
-  }
-}
-
-footer.section-footer .services ul {
-  list-style: none;
-  padding-left: 0px;
-}
-
-footer.section-footer .services ul li h4 {
-  font-size: 16px;
-  line-height: 27px;
-  color: var(--header-text-color);
-  font-weight: 600;
-  text-transform: lowercase;
-}
-
-footer.section-footer .services ul li a {
-  font-size: 14px;
-  line-height: 21px;
-  color: var(--title-color);
-  margin-bottom: 0;
-  font-weight: 400;
-  text-transform: lowercase;
-}
-
-footer.section-footer .services ul li img {
-  height: 15px;
-  margin-right: 10px;
-}
-
-footer.section-footer .produk {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-footer.section-footer .produk a {
-  margin: 0.5em 0;
-}
-
-footer.section-footer .copyright {
-  font-size: 12px;
 }
 
 @media (min-width: 576px) {
