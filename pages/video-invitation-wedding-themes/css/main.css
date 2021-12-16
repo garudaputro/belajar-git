@@ -799,15 +799,12 @@ section.wedding-themes .product .card-product .card-body .btn-card {
   margin: 0.6em 0;
 }
 
-section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema {
-  padding: 12px 28px;
+section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
+  padding: 0.7em 1.6em;
   background-color: var(--primary-color);
   border-radius: 8px;
   width: 11em;
   text-align: center;
-}
-
-section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
@@ -865,15 +862,12 @@ footer.section-footer .text-ajakan h1 {
   color: var(--header-text-color);
 }
 
-footer.section-footer .text-ajakan .btn-cta-primary {
-  padding: 12px 28px;
+footer.section-footer .text-ajakan .btn-cta-primary a {
+  padding: 0.7em 1.6em;
   background-color: var(--primary-color);
   border-radius: 8px;
   width: 11em;
   text-align: center;
-}
-
-footer.section-footer .text-ajakan .btn-cta-primary a {
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;

@@ -314,9 +314,16 @@
 footer.section-footer {
   margin-top: 100px;
   background-color: var(--bg-card-color);
+  padding: 2em 2em 7em 2em;
   border-radius: 24px 24px 0 0;
   display: relative;
   z-index: 3;
+}
+
+@media (min-width: 768px) {
+  footer.section-footer {
+    padding: 3em;
+  }
 }
 
 footer.section-footer .text-ajakan h1 {
@@ -328,15 +335,12 @@ footer.section-footer .text-ajakan h1 {
   margin-bottom: 1em;
 }
 
-footer.section-footer .text-ajakan .btn-cta-primary {
-  padding: 12px 28px;
+footer.section-footer .text-ajakan .btn-cta-primary a {
+  padding: 0.7em 1.6em;
   background-color: var(--primary-color);
   border-radius: 8px;
   width: 11em;
   text-align: center;
-}
-
-footer.section-footer .text-ajakan .btn-cta-primary a {
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
@@ -353,12 +357,7 @@ footer.section-footer .services {
   }
 }
 
-footer.section-footer .services ul {
-  list-style: none;
-  padding-left: 0px;
-}
-
-footer.section-footer .services ul li h4 {
+footer.section-footer .services .row h4 {
   font-size: 16px;
   line-height: 27px;
   color: var(--header-text-color);
@@ -366,7 +365,7 @@ footer.section-footer .services ul li h4 {
   text-transform: lowercase;
 }
 
-footer.section-footer .services ul li a {
+footer.section-footer .services .row a {
   font-size: 14px;
   line-height: 21px;
   color: var(--title-color);
@@ -375,12 +374,12 @@ footer.section-footer .services ul li a {
   text-transform: lowercase;
 }
 
-footer.section-footer .services ul li img {
+footer.section-footer .services .row img {
   height: 15px;
   margin-right: 10px;
 }
 
-footer.section-footer .produk {
+.produk {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -390,11 +389,11 @@ footer.section-footer .produk {
   display: flex;
 }
 
-footer.section-footer .produk a {
+.produk a {
   margin: 0.5em 0;
 }
 
-footer.section-footer .copyright {
+.copyright {
   font-size: 12px;
 }
 
@@ -561,15 +560,12 @@ section .sub-header p {
   display: flex;
 }
 
-.hero-section .left .btn-cta .btn-cta-primary {
-  padding: 12px 28px;
+.hero-section .left .btn-cta .btn-cta-primary a {
+  padding: 0.7em 1.6em;
   background-color: var(--primary-color);
   border-radius: 8px;
   width: 11em;
   text-align: center;
-}
-
-.hero-section .left .btn-cta .btn-cta-primary a {
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
@@ -976,7 +972,7 @@ section.section-our-way .our-way .desc p {
 .section-our-services .service .card-product .card-body .btn-card .btn-lihat-tema a {
   background-color: var(--bg-card-color);
   text-transform: capitalize;
-  padding: 0.7em 2em;
+  padding: 0.7em 1.6em;
   border-radius: 8px;
   color: var(--primary-color);
   margin-right: 10px;

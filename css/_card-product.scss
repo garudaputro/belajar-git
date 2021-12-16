@@ -6,6 +6,7 @@
   border-radius: 15px;
   width: 350px;
   padding: 1em;
+  margin-bottom: 2em;
   @include media-breakpoint-up(md) {
     width: 326px;
   }
@@ -86,23 +87,14 @@
       }
     }
     .btn-card {
+      margin: 1em 0;
       display: flex;
-      margin-top: 2em;
-      margin-bottom: 1em;
       justify-content: space-between;
       @include media-breakpoint-up(md) {
-        justify-content: inherit;
+        justify-self: unset;
       }
       .btn-pilih-tema {
-        a {
-          background-color: #f7931e;
-          padding: 0.6em 1.8em;
-          border-radius: 8px;
-          color: white;
-          margin-right: 10px;
-          text-decoration: none;
-          text-transform: capitalize;
-        }
+        @include btn-cta-primary;
       }
       .btn-lihat-tema {
         @include btn-cta-secondary;

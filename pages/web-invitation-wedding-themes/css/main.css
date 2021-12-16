@@ -314,9 +314,16 @@
 footer.section-footer {
   margin-top: 100px;
   background-color: var(--bg-card-color);
+  padding: 2em 2em 7em 2em;
   border-radius: 24px 24px 0 0;
   display: relative;
   z-index: 3;
+}
+
+@media (min-width: 768px) {
+  footer.section-footer {
+    padding: 3em;
+  }
 }
 
 footer.section-footer .text-ajakan h1 {
@@ -328,15 +335,12 @@ footer.section-footer .text-ajakan h1 {
   margin-bottom: 1em;
 }
 
-footer.section-footer .text-ajakan .btn-cta-primary {
-  padding: 12px 28px;
+footer.section-footer .text-ajakan .btn-cta-primary a {
+  padding: 0.7em 1.6em;
   background-color: var(--primary-color);
   border-radius: 8px;
   width: 11em;
   text-align: center;
-}
-
-footer.section-footer .text-ajakan .btn-cta-primary a {
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
@@ -353,12 +357,7 @@ footer.section-footer .services {
   }
 }
 
-footer.section-footer .services ul {
-  list-style: none;
-  padding-left: 0px;
-}
-
-footer.section-footer .services ul li h4 {
+footer.section-footer .services .row h4 {
   font-size: 16px;
   line-height: 27px;
   color: var(--header-text-color);
@@ -366,7 +365,7 @@ footer.section-footer .services ul li h4 {
   text-transform: lowercase;
 }
 
-footer.section-footer .services ul li a {
+footer.section-footer .services .row a {
   font-size: 14px;
   line-height: 21px;
   color: var(--title-color);
@@ -375,12 +374,12 @@ footer.section-footer .services ul li a {
   text-transform: lowercase;
 }
 
-footer.section-footer .services ul li img {
+footer.section-footer .services .row img {
   height: 15px;
   margin-right: 10px;
 }
 
-footer.section-footer .produk {
+.produk {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -390,11 +389,11 @@ footer.section-footer .produk {
   display: flex;
 }
 
-footer.section-footer .produk a {
+.produk a {
   margin: 0.5em 0;
 }
 
-footer.section-footer .copyright {
+.copyright {
   font-size: 12px;
 }
 
@@ -609,7 +608,6 @@ section.our-offer .right .offer .why-us .desc p {
 }
 
 section.section-pricelist {
-  padding: 0;
   margin-bottom: 100px;
   margin-top: 100px;
 }
@@ -623,31 +621,34 @@ section.section-pricelist .header-text h1 {
   margin-bottom: 20px;
 }
 
-section.section-pricelist .wrap-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+section.section-pricelist .row {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-section.section-pricelist .wrap-card .card {
+section.section-pricelist .row .card {
   border: 1px solid #f8f8f8;
   -webkit-box-shadow: 0px 5px 10px rgba(209, 209, 209, 0.2);
           box-shadow: 0px 5px 10px rgba(209, 209, 209, 0.2);
   margin: 20px auto;
   width: 350px;
-  border-radius: 15px;
-  position: relative;
+  border-radius: 16px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
 
-section.section-pricelist .wrap-card .card .card-body span.diminati {
+@media (min-width: 992px) {
+  section.section-pricelist .row .card {
+    margin: 0 20px;
+  }
+}
+
+section.section-pricelist .row .card .card-body span.diminati {
   background-color: #f7931e;
   border-radius: 0 0 15px 15px;
   padding: 5px 20px;
@@ -659,7 +660,7 @@ section.section-pricelist .wrap-card .card .card-body span.diminati {
           transform: translate(-50%, -50%);
 }
 
-section.section-pricelist .wrap-card .card .card-body .card-title {
+section.section-pricelist .row .card .card-body .card-title {
   text-transform: uppercase;
   padding-top: 2em;
   font-weight: 700;
@@ -669,11 +670,11 @@ section.section-pricelist .wrap-card .card .card-body .card-title {
   color: #432e2d;
 }
 
-section.section-pricelist .wrap-card .card .card-body .price {
+section.section-pricelist .row .card .card-body .price {
   margin-top: 20px;
 }
 
-section.section-pricelist .wrap-card .card .card-body .price h5 {
+section.section-pricelist .row .card .card-body .price h5 {
   margin-bottom: 0px;
   font-size: 14px;
   line-height: 21px;
@@ -681,36 +682,36 @@ section.section-pricelist .wrap-card .card .card-body .price h5 {
   color: #858585;
 }
 
-section.section-pricelist .wrap-card .card .card-body .price h3 {
+section.section-pricelist .row .card .card-body .price h3 {
   margin-top: 10px;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 32px;
   line-height: 27px;
   text-transform: capitalize;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
-section.section-pricelist .wrap-card .card .card-body .price h3 span {
+section.section-pricelist .row .card .card-body .price h3 span {
   font-weight: 400;
   font-size: 14px;
   line-height: 15px;
   letter-spacing: 0.05em;
-  color: #b3b0b0;
+  color: var(--title-color);
 }
 
-section.section-pricelist .wrap-card .card .card-body hr {
+section.section-pricelist .row .card .card-body hr {
   border: 1px solid #e2e2e2;
 }
 
-section.section-pricelist .wrap-card .card .card-body .features-list .feature {
+section.section-pricelist .row .card .card-body .features-list .feature {
   margin: 15px 0;
 }
 
-section.section-pricelist .wrap-card .card .card-body .features-list .feature .ic-check {
+section.section-pricelist .row .card .card-body .features-list .feature .ic-check {
   margin-right: 10px;
 }
 
-section.section-pricelist .wrap-card .card .card-body .features-list .feature p {
+section.section-pricelist .row .card .card-body .features-list .feature p {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -721,11 +722,11 @@ section.section-pricelist .wrap-card .card .card-body .features-list .feature p 
   color: #858585;
 }
 
-section.section-pricelist .wrap-card .card.custom-design .card-title {
+section.section-pricelist .row .card.custom-design .card-title {
   padding-top: 1.5em;
 }
 
-section.section-pricelist .wrap-card .card.custom-design .features-list .note p {
+section.section-pricelist .row .card.custom-design .features-list .note p {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
@@ -794,6 +795,7 @@ section.wedding-themes .product .card-product {
   border-radius: 15px;
   width: 350px;
   padding: 1em;
+  margin-bottom: 2em;
 }
 
 @media (min-width: 768px) {
@@ -904,11 +906,10 @@ section.wedding-themes .product .card-product .card-body .harga span {
 }
 
 section.wedding-themes .product .card-product .card-body .btn-card {
+  margin: 1em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 2em;
-  margin-bottom: 1em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -916,26 +917,27 @@ section.wedding-themes .product .card-product .card-body .btn-card {
 
 @media (min-width: 768px) {
   section.wedding-themes .product .card-product .card-body .btn-card {
-    -webkit-box-pack: inherit;
-        -ms-flex-pack: inherit;
-            justify-content: inherit;
+    -ms-grid-column-align: unset;
+        justify-self: unset;
   }
 }
 
 section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
-  background-color: #f7931e;
-  padding: 0.6em 1.8em;
+  padding: 0.7em 1.6em;
+  background-color: var(--primary-color);
   border-radius: 8px;
-  color: white;
-  margin-right: 10px;
-  text-decoration: none;
+  width: 11em;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
   text-transform: capitalize;
+  color: var(--white);
 }
 
 section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a {
   background-color: var(--bg-card-color);
   text-transform: capitalize;
-  padding: 0.7em 2em;
+  padding: 0.7em 1.6em;
   border-radius: 8px;
   color: var(--primary-color);
   margin-right: 10px;
@@ -983,15 +985,12 @@ section.wedding-themes footer.section-footer .text-ajakan h1 {
   color: var(--header-text-color);
 }
 
-section.wedding-themes footer.section-footer .text-ajakan .btn-cta-primary {
-  padding: 12px 28px;
+section.wedding-themes footer.section-footer .text-ajakan .btn-cta-primary a {
+  padding: 0.7em 1.6em;
   background-color: var(--primary-color);
   border-radius: 8px;
   width: 11em;
   text-align: center;
-}
-
-section.wedding-themes footer.section-footer .text-ajakan .btn-cta-primary a {
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;

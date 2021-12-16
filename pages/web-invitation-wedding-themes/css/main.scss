@@ -180,7 +180,6 @@ section.our-offer {
 
 // pricelist
 section.section-pricelist {
-  padding: 0;
   margin-bottom: 100px;
   margin-top: 100px;
   .header-text {
@@ -193,18 +192,20 @@ section.section-pricelist {
       margin-bottom: 20px;
     }
   }
-  .wrap-card {
-    display: flex;
-    flex-wrap: wrap;
+  .row {
     justify-content: center;
+    display: flex;
     .card {
       border: 1px solid #f8f8f8;
       box-shadow: 0px 5px 10px rgba(209, 209, 209, 0.2);
       margin: 20px auto;
       width: 350px;
-      border-radius: 15px;
-      position: relative;
+      border-radius: 16px;
       height: max-content;
+      @include media-breakpoint-up(lg) {
+        margin: 0 20px;
+      }
+
       .card-body {
         span.diminati {
           background-color: #f7931e;
@@ -237,17 +238,17 @@ section.section-pricelist {
           h3 {
             margin-top: 10px;
             font-weight: 600;
-            font-size: 35px;
+            font-size: 32px;
             line-height: 27px;
             text-transform: capitalize;
-            color: #f7931e;
+            color: var(--primary-color);
 
             span {
               font-weight: 400;
               font-size: 14px;
               line-height: 15px;
               letter-spacing: 0.05em;
-              color: #b3b0b0;
+              color: var(--title-color);
             }
           }
         }
