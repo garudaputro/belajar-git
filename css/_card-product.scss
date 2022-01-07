@@ -4,14 +4,16 @@
   background-color: white;
   box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
   border-radius: 15px;
-  width: 350px;
+  max-width: 350px;
   padding: 1em;
-  margin-bottom: 2em;
+  margin: 1em auto;
   @include media-breakpoint-up(md) {
     width: 326px;
+    margin: 1em;
   }
   @include media-breakpoint-up(lg) {
     width: 376px;
+    margin: 0.5em;
   }
   .card-body {
     padding: 0;
@@ -90,9 +92,6 @@
       margin: 1em 0;
       display: flex;
       justify-content: space-between;
-      @include media-breakpoint-up(md) {
-        justify-self: unset;
-      }
       .btn-pilih-tema {
         @include btn-cta-primary;
       }

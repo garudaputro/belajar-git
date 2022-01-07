@@ -194,6 +194,7 @@
 
 .nav-mobile ul li a svg {
   height: 32px;
+  width: 32px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   stroke-width: 0.3;
@@ -229,7 +230,7 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-color: transparent;
+  background-color: #fff;
   border-radius: 0 0 8px 8px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -239,15 +240,28 @@
   max-width: 120px;
 }
 
+@media (min-width: 992px) {
+  .nav-desktop a.navbar-brand img.brand {
+    max-width: 150px;
+  }
+}
+
 .nav-desktop ul li.active-desktop a {
   color: var(--primary-color);
 }
 
 .nav-desktop ul li a {
-  color: #695857;
+  color: var(--title-color);
   font-size: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
+}
+
+@media (min-width: 992px) {
+  .nav-desktop ul li a {
+    font-size: 16px;
+  }
 }
 
 .nav-desktop ul li a:hover {
@@ -258,18 +272,24 @@
 
 .nav-desktop ul a.btn-contact-us {
   font-size: 14px;
-  background-color: #fef6ee;
-  border: 1px solid #f9b362;
+  background-color: var(--bg-card-color);
   margin-left: 10px;
   padding: 0.5em 1.5em;
   border-radius: 8px;
-  color: #f9b362;
+  color: var(--primary-color);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
+@media (min-width: 992px) {
+  .nav-desktop ul a.btn-contact-us {
+    font-size: 18px;
+  }
+}
+
 .nav-desktop ul a.btn-contact-us svg {
-  margin-right: 2px;
+  margin-right: 5px;
+  width: 25px;
 }
 
 .nav-desktop ul a.btn-contact-us:hover {
@@ -326,6 +346,12 @@ footer.section-footer {
   }
 }
 
+@media (min-width: 992px) {
+  footer.section-footer {
+    padding: 3em 5em;
+  }
+}
+
 footer.section-footer .text-ajakan h1 {
   font-weight: 500;
   font-size: 20px;
@@ -336,15 +362,31 @@ footer.section-footer .text-ajakan h1 {
 }
 
 footer.section-footer .text-ajakan .btn-cta-primary a {
-  padding: 0.7em 1.6em;
   background-color: var(--primary-color);
   border-radius: 8px;
-  width: 11em;
   text-align: center;
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
   color: var(--white);
+}
+
+@media (max-width: 575.98px) {
+  footer.section-footer .text-ajakan .btn-cta-primary a {
+    padding: 0.7em 1.3em;
+  }
+}
+
+@media (min-width: 768px) {
+  footer.section-footer .text-ajakan .btn-cta-primary a {
+    padding: 0.7em 1.6em;
+  }
+}
+
+@media (min-width: 992px) {
+  footer.section-footer .text-ajakan .btn-cta-primary a {
+    padding: 0.7em 2em;
+  }
 }
 
 footer.section-footer .services {
@@ -354,6 +396,18 @@ footer.section-footer .services {
 @media (min-width: 768px) {
   footer.section-footer .services {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  footer.section-footer .services .row {
+    gap: 0 3em;
+  }
+}
+
+@media (min-width: 992px) {
+  footer.section-footer .services .row {
+    gap: unset;
   }
 }
 
@@ -434,14 +488,6 @@ body.offcanvas-menu:before {
   visibility: visible;
 }
 
-.loader-bg {
-  position: fixed;
-  z-index: 99999;
-  background: white;
-  width: 100%;
-  height: 100%;
-}
-
 .bg-top {
   background-color: var(--primary-color);
   border-radius: 0 0 24px 24px;
@@ -489,7 +535,7 @@ body.offcanvas-menu:before {
 
 @media (min-width: 768px) {
   .bg-top .text-headline h1 {
-    font-size: 28px;
+    font-size: 32px;
     padding: 0 1em;
   }
 }
@@ -498,6 +544,12 @@ body.offcanvas-menu:before {
   font-size: 14px;
   color: var(--white);
   padding: 0 1em;
+}
+
+@media (min-width: 768px) {
+  .bg-top .text-headline p {
+    font-size: 18px;
+  }
 }
 
 .bg-top img.decoration-left,
@@ -559,6 +611,12 @@ body.offcanvas-menu:before {
   text-transform: capitalize;
   font-size: 20px;
   color: var(--header-text-color);
+}
+
+@media (min-width: 768px) {
+  .header-text h3 {
+    font-size: 32px;
+  }
 }
 
 section.our-offer {
@@ -648,8 +706,12 @@ section.section-pricelist .row .card {
   }
 }
 
+section.section-pricelist .row .card .card-body {
+  padding: 1.5em 1em;
+}
+
 section.section-pricelist .row .card .card-body span.diminati {
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   border-radius: 0 0 15px 15px;
   padding: 5px 20px;
   color: white;
@@ -662,7 +724,6 @@ section.section-pricelist .row .card .card-body span.diminati {
 
 section.section-pricelist .row .card .card-body .card-title {
   text-transform: uppercase;
-  padding-top: 2em;
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
@@ -793,20 +854,22 @@ section.wedding-themes .product .card-product {
   -webkit-box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
           box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
   border-radius: 15px;
-  width: 350px;
+  max-width: 350px;
   padding: 1em;
-  margin-bottom: 2em;
+  margin: 1em auto;
 }
 
 @media (min-width: 768px) {
   section.wedding-themes .product .card-product {
     width: 326px;
+    margin: 1em;
   }
 }
 
 @media (min-width: 992px) {
   section.wedding-themes .product .card-product {
     width: 376px;
+    margin: 0.5em;
   }
 }
 
@@ -915,18 +978,9 @@ section.wedding-themes .product .card-product .card-body .btn-card {
           justify-content: space-between;
 }
 
-@media (min-width: 768px) {
-  section.wedding-themes .product .card-product .card-body .btn-card {
-    -ms-grid-column-align: unset;
-        justify-self: unset;
-  }
-}
-
 section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
-  padding: 0.7em 1.6em;
   background-color: var(--primary-color);
   border-radius: 8px;
-  width: 11em;
   text-align: center;
   font-size: 16px;
   line-height: 24px;
@@ -934,16 +988,51 @@ section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-te
   color: var(--white);
 }
 
+@media (max-width: 575.98px) {
+  section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
+    padding: 0.7em 1.3em;
+  }
+}
+
+@media (min-width: 768px) {
+  section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
+    padding: 0.7em 1.6em;
+  }
+}
+
+@media (min-width: 992px) {
+  section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
+    padding: 0.7em 2em;
+  }
+}
+
 section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a {
   background-color: var(--bg-card-color);
   text-transform: capitalize;
-  padding: 0.7em 1.6em;
   border-radius: 8px;
   color: var(--primary-color);
   margin-right: 10px;
   text-decoration: none;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
+}
+
+@media (max-width: 575.98px) {
+  section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a {
+    padding: 0.7em 1.3em;
+  }
+}
+
+@media (min-width: 768px) {
+  section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a {
+    padding: 0.7em 1.6em;
+  }
+}
+
+@media (min-width: 992px) {
+  section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a {
+    padding: 0.7em 2em;
+  }
 }
 
 section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a:hover {
@@ -986,15 +1075,31 @@ section.wedding-themes footer.section-footer .text-ajakan h1 {
 }
 
 section.wedding-themes footer.section-footer .text-ajakan .btn-cta-primary a {
-  padding: 0.7em 1.6em;
   background-color: var(--primary-color);
   border-radius: 8px;
-  width: 11em;
   text-align: center;
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
   color: var(--white);
+}
+
+@media (max-width: 575.98px) {
+  section.wedding-themes footer.section-footer .text-ajakan .btn-cta-primary a {
+    padding: 0.7em 1.3em;
+  }
+}
+
+@media (min-width: 768px) {
+  section.wedding-themes footer.section-footer .text-ajakan .btn-cta-primary a {
+    padding: 0.7em 1.6em;
+  }
+}
+
+@media (min-width: 992px) {
+  section.wedding-themes footer.section-footer .text-ajakan .btn-cta-primary a {
+    padding: 0.7em 2em;
+  }
 }
 
 section.wedding-themes footer.section-footer .services ul {

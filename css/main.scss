@@ -6,6 +6,8 @@
 @import "../css/navbar";
 @import "../css/buttons";
 @import "../css/footer";
+@import "../css/card-product";
+@import "../css/footer";
 
 * {
   padding: 0;
@@ -79,12 +81,14 @@ section {
     h3 {
       font-size: 20px;
       line-height: 30px;
-      text-transform: uppercase;
+      text-transform: capitalize;
       color: var(--header-text-color);
       position: relative;
       z-index: 2;
       font-weight: 600;
-
+      @include media-breakpoint-up(md) {
+        font-size: 32px;
+      }
       span {
         color: var(--primary-color);
       }
@@ -115,14 +119,13 @@ section {
   }
   @include media-breakpoint-up(md) {
     margin-top: 0px;
-    padding-top: 100px;
+    padding: 8em 5em 0;
   }
   // padding-top: 4em;
   .right {
     display: flex;
     justify-content: center;
     img {
-      max-width: 350px;
       width: 100%;
     }
   }
@@ -141,6 +144,12 @@ section {
         @include media-breakpoint-down(sm) {
           font-size: 24px;
         }
+        @include media-breakpoint-up(lg) {
+          font-size: 32px;
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: 40px;
+        }
 
         span {
           color: var(--primary-color);
@@ -155,6 +164,13 @@ section {
         color: var(--title-color);
         @include media-breakpoint-down(sm) {
           font-size: 12px;
+        }
+        @include media-breakpoint-up(md) {
+          font-size: 14px;
+          padding: 7px 0;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 16px;
         }
       }
     }
@@ -171,11 +187,15 @@ section {
 .why-us-section {
   margin-bottom: 100px;
   background-color: var(--bg-card-color);
-  padding: 40px 20px;
+  padding: 2em 2em 4em 2em;
   border-radius: 24px;
+  @include media-breakpoint-up(lg) {
+    margin: 5em 10em;
+  }
 
   .why-us {
     padding-bottom: 10px;
+    margin-top: 1.5em;
     .icon {
       img {
         width: 45px;
@@ -270,6 +290,11 @@ section.section-our-way {
     @include btn-cta-threeary;
   }
   .service {
+    margin: auto;
+    @include media-breakpoint-up(lg) {
+      padding: 0 3em;
+    }
+
     &.video-invitation,
     &.design-invitation {
       margin-top: 5em;
@@ -294,112 +319,9 @@ section.section-our-way {
       }
     }
     .card-product {
-      box-sizing: border-box;
-      border: 1px solid var(--border-color);
-      background-color: white;
-      box-shadow: 0px 10px 20px rgba(236, 236, 236, 0.25);
-      border-radius: 16px;
-      padding: 1em;
-      margin: auto;
-      width: 340px;
+      @include card-product;
       @include media-breakpoint-up(md) {
-        width: 346px;
-      }
-      @include media-breakpoint-up(lg) {
-        width: 376px;
-      }
-      .card-body {
-        padding: 0;
-        .card-img {
-          position: relative;
-          a {
-            img.btn-play {
-              position: absolute;
-              width: 60px;
-              height: 60px;
-              z-index: 2;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
-          }
-        }
-        .nama-tema {
-          display: flex;
-          justify-content: space-between;
-          margin: 20px 0 10px;
-
-          h3 {
-            text-transform: capitalize;
-            font-weight: 500;
-            font-size: 25px;
-            color: #432e2d;
-            margin-bottom: 0;
-            @include media-breakpoint-up(md) {
-              font-size: 20px;
-            }
-            @include media-breakpoint-up(lg) {
-              font-size: 25px;
-            }
-          }
-          span {
-            text-transform: capitalize;
-            text-align: center;
-            padding: 5px 10px;
-            border-radius: 4px;
-            color: var(--color-discount);
-            background-color: var(--bg-color-discount);
-            align-self: center;
-            font-size: 14px;
-          }
-        }
-        .harga {
-          display: flex;
-          h3 {
-            font-weight: 600;
-            font-size: 22px;
-            line-height: 27px;
-            text-transform: capitalize;
-            color: #f7931e;
-          }
-          span {
-            margin-left: 10px;
-            margin-top: 3px;
-            font-size: 14px;
-            line-height: 18px;
-            /* identical to box height */
-
-            text-align: center;
-            letter-spacing: 0.05em;
-            text-decoration-line: line-through;
-            text-transform: capitalize;
-
-            color: #b3b0b0;
-          }
-        }
-        .btn-card {
-          display: flex;
-          margin-top: 2em;
-          margin-bottom: 1em;
-          justify-content: space-between;
-          @include media-breakpoint-up(md) {
-            justify-content: inherit;
-          }
-          .btn-pilih-tema {
-            a {
-              background-color: #f7931e;
-              padding: 0.6em 1.8em;
-              border-radius: 8px;
-              color: white;
-              margin-right: 10px;
-              text-decoration: none;
-              text-transform: capitalize;
-            }
-          }
-          .btn-lihat-tema {
-            @include btn-cta-secondary;
-          }
-        }
+        margin: 0;
       }
     }
     .left {
@@ -488,7 +410,7 @@ section.section-our-way {
 // testimoni
 section.section-testimoni {
   margin-top: 100px;
-  background-color: var(--second-bg-color);
+  background-color: var(--bg-card-color);
   padding: 30px 20px 5px;
   border-radius: 24px;
   text-align: center;
@@ -553,6 +475,10 @@ section.section-testimoni {
 // faq
 section.section-faq {
   margin-top: 100px;
+  @include media-breakpoint-up(md) {
+    margin: 50px auto;
+    max-width: 40em;
+  }
   .header-text {
     .outline {
       img {
@@ -582,184 +508,6 @@ section.section-faq {
           color: var(--title-color);
         }
       }
-    }
-  }
-}
-
-// RESPONSIVE
-@media (min-width: 576px) {
-  // our worrk
-  section.section-our-work {
-    .our-work {
-      .card {
-        .btn-view {
-          margin-top: 22em;
-        }
-      }
-    }
-  }
-}
-@media (min-width: 768px) {
-  // navbar
-
-  .outline {
-    img {
-      width: 300px !important;
-    }
-  }
-
-  // hero section
-  section.hero-section {
-    // padding-top: 8em;
-    .right {
-      order: 2;
-      margin-top: 0;
-    }
-  }
-
-  // our way
-  section.section-our-way {
-    .our-way {
-      .card {
-        width: 80%;
-        margin: 100px auto;
-      }
-    }
-  }
-
-  // our-services
-  .video-invitation,
-  .design-invitation {
-    margin-top: 6em !important;
-  }
-  // faq
-  section.section-faq {
-    .card-faq {
-      .card {
-        width: 80%;
-        margin: 20px auto;
-      }
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  section.hero-section {
-    padding-top: 9em;
-    .right {
-      img {
-        width: 400px !important;
-      }
-    }
-    .left {
-      align-self: center;
-      .headline {
-        h1 {
-          font-size: 30px;
-        }
-      }
-    }
-  }
-
-  section.why-us-section {
-    .owl-one {
-      margin-top: 50px;
-      margin-bottom: 20px;
-    }
-  }
-
-  section.section-our-way {
-    .sub-header {
-      p {
-        padding: 0 8em;
-      }
-    }
-    .our-way {
-      .card {
-        width: 60%;
-
-        .img-our-way {
-          width: 180px !important;
-
-          svg {
-            width: 180px;
-          }
-        }
-      }
-    }
-  }
-
-  section.section-our-work {
-    .our-work {
-      display: flex;
-    }
-  }
-
-  section.section-testimoni {
-    .owl-two {
-      .owl-item {
-        height: 270px;
-      }
-    }
-  }
-
-  section.section-faq {
-    .outline {
-      img {
-        width: 20% !important;
-      }
-    }
-    .card-faq {
-      .card {
-        width: 60%;
-      }
-    }
-  }
-
-  footer.section-footer {
-    .content {
-      .text-ajakan {
-        align-self: center;
-      }
-      .services {
-        ul {
-          justify-content: space-evenly;
-          display: flex;
-          list-style: none;
-
-          li {
-            max-width: 200px;
-            margin: 0 20px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1000px !important;
-  }
-  section.hero-section {
-    .left {
-      padding-right: 0;
-    }
-  }
-
-  section.why-us-section {
-    .owl-one {
-      .owl-item {
-        padding: 0 2em;
-      }
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  footer.section-footer {
-    .content {
-      padding: 0 5em;
     }
   }
 }

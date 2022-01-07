@@ -2,6 +2,9 @@
 $(window).on('load', function () {
     $('.loader-bg').hide();
 });
+AOS.init({
+    duration: 1000,
+});
 
 
 $(document).ready(function () {
@@ -53,7 +56,7 @@ $(document).ready(function () {
 
     $('.owl-three').owlCarousel({
         loop: true,
-        autoplay: true,
+        // autoplay: true,
         autoplayTimeout: 2500,
         autoplayHoverPause: true,
         margin: 10,
