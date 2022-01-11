@@ -758,37 +758,25 @@ section .sub-header p {
   }
 }
 
-.hero-section .left .btn-cta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.hero-section .left .btn-cta .btn-cta-primary a {
-  background-color: var(--primary-color);
-  border-radius: 8px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 24px;
+.hero-section .left .btn-cta-main {
+  padding: 1.1em 0;
+  border-radius: 12px;
   text-transform: capitalize;
-  color: var(--white);
+  background-color: #f7931e;
+  border: none;
+  letter-spacing: 1px;
+  color: #fff;
 }
 
 @media (max-width: 575.98px) {
-  .hero-section .left .btn-cta .btn-cta-primary a {
-    padding: 0.7em 1.3em;
+  .hero-section .left .btn-cta-main {
+    display: block;
   }
 }
 
 @media (min-width: 768px) {
-  .hero-section .left .btn-cta .btn-cta-primary a {
-    padding: 0.7em 1.6em;
-  }
-}
-
-@media (min-width: 992px) {
-  .hero-section .left .btn-cta .btn-cta-primary a {
-    padding: 0.7em 2em;
+  .hero-section .left .btn-cta-main {
+    padding: 1em 1.8em;
   }
 }
 
@@ -1185,77 +1173,52 @@ section.section-our-way .our-way .desc p {
 }
 
 .section-our-services .service .card-product .card-body .btn-card {
-  margin: 1em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-top: 5px;
 }
 
-.section-our-services .service .card-product .card-body .btn-card .btn-pilih-tema a {
-  background-color: var(--primary-color);
+.section-our-services .service .card-product .card-body .btn-card a {
+  padding: 10px 0;
+  font-size: 14px;
   border-radius: 8px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: capitalize;
-  color: var(--white);
-}
-
-@media (max-width: 575.98px) {
-  .section-our-services .service .card-product .card-body .btn-card .btn-pilih-tema a {
-    padding: 0.7em 1.3em;
-  }
 }
 
 @media (min-width: 768px) {
-  .section-our-services .service .card-product .card-body .btn-card .btn-pilih-tema a {
-    padding: 0.7em 1.6em;
+  .section-our-services .service .card-product .card-body .btn-card a {
+    font-size: 16px;
   }
 }
 
-@media (min-width: 992px) {
-  .section-our-services .service .card-product .card-body .btn-card .btn-pilih-tema a {
-    padding: 0.7em 2em;
-  }
-}
-
-.section-our-services .service .card-product .card-body .btn-card .btn-lihat-tema a {
-  background-color: var(--bg-card-color);
-  text-transform: capitalize;
-  border-radius: 8px;
-  color: var(--primary-color);
+.section-our-services .service .card-product .card-body .btn-card a.btn-pilih-tema {
+  width: 50%;
   margin-right: 10px;
-  text-decoration: none;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-
-@media (max-width: 575.98px) {
-  .section-our-services .service .card-product .card-body .btn-card .btn-lihat-tema a {
-    padding: 0.7em 1.3em;
-  }
-}
-
-@media (min-width: 768px) {
-  .section-our-services .service .card-product .card-body .btn-card .btn-lihat-tema a {
-    padding: 0.7em 1.6em;
-  }
-}
-
-@media (min-width: 992px) {
-  .section-our-services .service .card-product .card-body .btn-card .btn-lihat-tema a {
-    padding: 0.7em 2em;
-  }
-}
-
-.section-our-services .service .card-product .card-body .btn-card .btn-lihat-tema a:hover {
   background-color: var(--primary-color);
-  color: white;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.section-our-services .service .card-product .card-body .btn-card a.btn-lihat-tema {
+  width: 50%;
+  background-color: var(--bg-card-color);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--primary-color);
 }
 
 @media (min-width: 768px) {

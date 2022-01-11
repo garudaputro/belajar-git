@@ -174,11 +174,14 @@ section {
         }
       }
     }
-    .btn-cta {
-      display: flex;
-      .btn-cta-primary {
-        @include btn-cta-primary;
-      }
+    // .btn-cta {
+    //   display: flex;
+    //   .btn-cta-primary {
+    //     @include btn-cta-primary;
+    //   }
+    // }
+    .btn-cta-main {
+      @include btn-cta-main;
     }
   }
 }

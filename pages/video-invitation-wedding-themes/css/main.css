@@ -965,76 +965,51 @@ section.wedding-themes .product .card-product .card-body .harga span {
 }
 
 section.wedding-themes .product .card-product .card-body .btn-card {
-  margin: 1em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-top: 5px;
 }
 
-section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
-  background-color: var(--primary-color);
+section.wedding-themes .product .card-product .card-body .btn-card a {
+  padding: 10px 0;
+  font-size: 14px;
   border-radius: 8px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: capitalize;
-  color: var(--white);
-}
-
-@media (max-width: 575.98px) {
-  section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
-    padding: 0.7em 1.3em;
-  }
 }
 
 @media (min-width: 768px) {
-  section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
-    padding: 0.7em 1.6em;
+  section.wedding-themes .product .card-product .card-body .btn-card a {
+    font-size: 16px;
   }
 }
 
-@media (min-width: 992px) {
-  section.wedding-themes .product .card-product .card-body .btn-card .btn-pilih-tema a {
-    padding: 0.7em 2em;
-  }
-}
-
-section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a {
-  background-color: var(--bg-card-color);
-  text-transform: capitalize;
-  border-radius: 8px;
-  color: var(--primary-color);
+section.wedding-themes .product .card-product .card-body .btn-card a.btn-pilih-tema {
+  width: 50%;
   margin-right: 10px;
-  text-decoration: none;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-
-@media (max-width: 575.98px) {
-  section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a {
-    padding: 0.7em 1.3em;
-  }
-}
-
-@media (min-width: 768px) {
-  section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a {
-    padding: 0.7em 1.6em;
-  }
-}
-
-@media (min-width: 992px) {
-  section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a {
-    padding: 0.7em 2em;
-  }
-}
-
-section.wedding-themes .product .card-product .card-body .btn-card .btn-lihat-tema a:hover {
   background-color: var(--primary-color);
-  color: white;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+section.wedding-themes .product .card-product .card-body .btn-card a.btn-lihat-tema {
+  width: 50%;
+  background-color: var(--bg-card-color);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--primary-color);
 }
 /*# sourceMappingURL=main.css.map */
