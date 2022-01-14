@@ -1,0 +1,286 @@
+// our offer
+section.our-offer {
+  padding-top: 3em;
+  h3 {
+    text-transform: capitalize;
+  }
+  .right {
+    .offer {
+      .why-us {
+        margin-top: 30px;
+        background-color: $background-color-secondary;
+        padding: 30px;
+        border-radius: 40px;
+        min-height: 230px;
+        .icon {
+          img {
+            width: 58px;
+            height: 58px;
+          }
+          margin-bottom: 10px;
+        }
+        .desc {
+          margin-top: 25px;
+          h4 {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 27px;
+            text-transform: capitalize;
+            color: $text-color-primary;
+            margin-bottom: 5px;
+          }
+          p {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: lowercase;
+            color: $text-color-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// pricelist
+section.section-pricelist {
+  margin-bottom: 100px;
+  margin-top: 100px;
+  .header-text {
+    h1 {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 60px;
+      text-transform: capitalize;
+      color: #432e2d;
+      margin-bottom: 20px;
+    }
+  }
+  .row {
+    justify-content: center;
+    display: flex;
+    .card {
+      border: 1px solid #f8f8f8;
+      box-shadow: 0px 5px 10px rgba(209, 209, 209, 0.2);
+      margin: 20px auto;
+      width: 350px;
+      border-radius: 16px;
+      height: max-content;
+      @include media-breakpoint-up(lg) {
+        margin: 0 20px;
+      }
+
+      .card-body {
+        padding: 1.5em 1em;
+        span.diminati {
+          background-color: $primary-color;
+          border-radius: 0 0 15px 15px;
+          padding: 5px 20px;
+          color: white;
+          position: absolute;
+          top: 16px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .card-title {
+          text-transform: uppercase;
+
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 28px;
+          letter-spacing: 0.05em;
+          color: #432e2d;
+        }
+        .price {
+          margin-top: 20px;
+          h5 {
+            margin-bottom: 0px;
+            font-size: 14px;
+            line-height: 21px;
+            text-transform: capitalize;
+            color: #858585;
+          }
+          h3 {
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 27px;
+            text-transform: capitalize;
+            color: $primary-color;
+
+            span {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 15px;
+              letter-spacing: 0.05em;
+              color: $text-color-secondary;
+            }
+          }
+        }
+        hr {
+          border: 1px solid #e2e2e2;
+        }
+        .features-list {
+          .feature {
+            margin: 15px 0;
+            .ic-check {
+              margin-right: 10px;
+            }
+            p {
+              align-self: center;
+              margin-bottom: 0;
+              font-size: 18px;
+              line-height: 21px;
+              text-transform: capitalize;
+              color: #858585;
+            }
+          }
+        }
+      }
+    }
+    .card.custom-design {
+      .card-title {
+        padding-top: 1.5em;
+      }
+
+      .features-list {
+        .note {
+          p {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+            color: #b3b0b0;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// wedding themes
+section.wedding-themes {
+  .header-text {
+    h3 {
+      text-transform: capitalize;
+    }
+  }
+  ul {
+    display: flex;
+    margin-bottom: 25px;
+    padding-left: 0;
+    flex-wrap: wrap;
+
+    li {
+      list-style: none;
+      background: $background-color-secondary;
+      margin: 5px;
+      padding: 8px 20px;
+      color: $primary-color;
+      letter-spacing: 1px;
+      cursor: pointer;
+      font-size: 14px;
+      -webkit-box-align: center;
+      align-items: center;
+      display: -webkit-box;
+      border-radius: 8px;
+      text-transform: capitalize;
+
+      &.active {
+        background: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item-box {
+      position: relative;
+      margin: 5px;
+    }
+    .card-product {
+      @include card-product;
+    }
+  }
+
+  footer.section-footer {
+    margin-top: 8em;
+    background-color: $background-color-secondary;
+    padding: 4em 2em;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    z-index: 3;
+    bottom: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 150px;
+      z-index: 1;
+      background-image: url(../assets/decorasi_footer.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 120px;
+      bottom: 0;
+      right: 0;
+    }
+
+    .text-ajakan {
+      h1 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: capitalize;
+        color: $text-color-primary;
+      }
+      .btn-cta-primary {
+        @include btn-cta-primary;
+      }
+    }
+
+    .services {
+      ul {
+        list-style: none;
+        padding-left: 0px;
+        li {
+          h4 {
+            font-size: 16px;
+            line-height: 27px;
+            color: $text-color-primary;
+            font-weight: 600;
+            text-transform: capitalize;
+          }
+          a {
+            font-size: 14px;
+            line-height: 21px;
+            color: $text-color-secondary;
+            margin-bottom: 0;
+            font-weight: 400;
+
+            text-transform: lowercase;
+          }
+          img {
+            height: 15px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .produk {
+      flex-direction: column;
+      display: flex;
+      a {
+        margin: 0.5em 0;
+      }
+    }
+    .copyright {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+@import "../style/colors";
+@import "../style/preloader";
+@import "../style/navbar";
+@import "../style/global";
+@import "../style/buttons";
+@import "../style/card-product";
+@import "../style/footer";
+
+@import "../style/pages/home";
+@import "../style/pages/video-invitation";
+@import "../style/pages/website-invitation";
+@import "../style/pages/contact-us";

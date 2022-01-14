@@ -1,0 +1,125 @@
+@mixin card-product {
+  box-sizing: border-box;
+  border: 1px solid #f2f2f2;
+  background-color: $white;
+  box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
+  border-radius: 15px;
+  max-width: 350px;
+  padding: 1em;
+
+  margin: 1em auto;
+  @include media-breakpoint-up(md) {
+    width: 326px;
+    margin: 1em;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 376px;
+    margin: 0.5em;
+  }
+  .card-body {
+    padding: 0;
+    .card-img {
+      position: relative;
+      a {
+        img.btn-play {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          z-index: 2;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .nama-tema {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+
+      h3 {
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 25px;
+        color: #432e2d;
+        margin-bottom: 0;
+        @include media-breakpoint-up(md) {
+          font-size: 20px;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 25px;
+        }
+      }
+      span {
+        text-transform: capitalize;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 8px;
+        color: $error-color-text;
+        background-color: $error-color-background;
+        align-self: center;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    .harga {
+      display: flex;
+      h3 {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        text-transform: capitalize;
+        color: #f7931e;
+      }
+      span {
+        margin-left: 10px;
+        margin-top: 3px;
+        font-size: 14px;
+        line-height: 18px;
+        /* identical to box height */
+
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-decoration-line: line-through;
+        text-transform: capitalize;
+
+        color: #b3b0b0;
+      }
+    }
+    .btn-card {
+      display: flex;
+
+      margin-top: 5px;
+
+      a {
+        padding: 10px 0;
+        font-size: 14px;
+        border-radius: 8px;
+        @include media-breakpoint-up(md) {
+          font-size: 16px;
+        }
+        &.btn-pilih-tema {
+          width: 50%;
+          margin-right: 10px;
+          background-color: $primary-color;
+          color: #fff;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+        &.btn-lihat-tema {
+          width: 50%;
+          background-color: $background-color-secondary;
+          justify-content: center;
+          display: flex;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
