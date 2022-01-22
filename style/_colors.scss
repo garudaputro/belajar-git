@@ -95,6 +95,35 @@
       background-color: var(--background-color-secondary);
       border: 1px solid var(--border-color) !important;
       box-shadow: none !important;
+      .features-list {
+        .feature {
+          p {
+            color: var(--text-color-primary) !important;
+          }
+          .ic-check {
+            .light {
+              display: none !important;
+            }
+            .dark {
+              display: flex !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // wedding themes
+  .wedding-themes {
+    .btn-filter {
+      li {
+        background-color: var(--error-color-background);
+        color: var(--text-color-primary);
+        &.active {
+          background: var(--primary-color);
+          color: #fff;
+        }
+      }
     }
   }
 }

@@ -41,167 +41,50 @@ section.our-offer {
     }
   }
 }
-// pricelist
-section.section-pricelist {
-  margin-bottom: 100px;
-  margin-top: 100px;
-  .header-text {
-    h1 {
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 60px;
-      text-transform: capitalize;
-      color: #432e2d;
-      margin-bottom: 20px;
-    }
-  }
-  .row {
-    justify-content: center;
-    display: flex;
-    .card {
-      border: 1px solid #f8f8f8;
-      box-shadow: 0px 5px 10px rgba(209, 209, 209, 0.2);
-      margin: 20px auto;
-      width: 350px;
-      border-radius: 16px;
-      height: max-content;
-      @include media-breakpoint-up(lg) {
-        margin: 0 20px;
-      }
-
-      .card-body {
-        padding: 1.5em 1em;
-        span.diminati {
-          background-color: var(--primary-color);
-          border-radius: 0 0 15px 15px;
-          padding: 5px 20px;
-          color: white;
-          position: absolute;
-          top: 16px;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-        .card-title {
-          text-transform: uppercase;
-
-          font-weight: 700;
-          font-size: 20px;
-          line-height: 28px;
-          letter-spacing: 0.05em;
-          color: #432e2d;
-        }
-        .price {
-          margin-top: 20px;
-          h5 {
-            margin-bottom: 0px;
-            font-size: 14px;
-            line-height: 21px;
-            text-transform: capitalize;
-            color: #858585;
-          }
-          h3 {
-            margin-top: 10px;
-            font-weight: 600;
-            font-size: 32px;
-            line-height: 27px;
-            text-transform: capitalize;
-            color: var(--primary-color);
-
-            span {
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 15px;
-              letter-spacing: 0.05em;
-              color: var(--text-color-secondary);
-            }
-          }
-        }
-        hr {
-          border: 1px solid #e2e2e2;
-        }
-        .features-list {
-          .feature {
-            margin: 15px 0;
-            .ic-check {
-              margin-right: 10px;
-            }
-            p {
-              align-self: center;
-              margin-bottom: 0;
-              font-size: 18px;
-              line-height: 21px;
-              text-transform: capitalize;
-              color: #858585;
-            }
-          }
-        }
-      }
-    }
-    .card.custom-design {
-      .card-title {
-        padding-top: 1.5em;
-      }
-
-      .features-list {
-        .note {
-          p {
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 15px;
-            letter-spacing: 0.05em;
-            text-transform: capitalize;
-            color: #b3b0b0;
-            margin-top: 25px;
-          }
-        }
-      }
-    }
-  }
-}
 
 // wedding themes
-section.wedding-themes {
-  .btn-filter {
-    display: flex;
-    margin-bottom: 25px;
-    padding-left: 0;
-    flex-wrap: wrap;
+// section.wedding-themes {
+//   .btn-filter {
+//     display: flex;
+//     margin-bottom: 25px;
+//     padding-left: 0;
+//     flex-wrap: wrap;
 
-    li {
-      list-style: none;
-      background: var(--background-color-secondary);
-      margin: 5px;
-      padding: 8px 20px;
-      color: var(--primary-color);
-      letter-spacing: 1px;
-      cursor: pointer;
-      font-size: 14px;
-      -webkit-box-align: center;
-      align-items: center;
-      display: -webkit-box;
-      border-radius: 8px;
-      text-transform: capitalize;
+//     li {
+//       list-style: none;
+//       background: var(--background-color-secondary);
+//       margin: 5px;
+//       padding: 8px 20px;
+//       color: var(--primary-color);
+//       letter-spacing: 1px;
+//       cursor: pointer;
+//       font-size: 14px;
+//       -webkit-box-align: center;
+//       align-items: center;
+//       display: -webkit-box;
+//       border-radius: 8px;
+//       text-transform: capitalize;
 
-      &.active {
-        background: var(--primary-color);
-        color: #fff;
-      }
-    }
-  }
+//       &.active {
+//         background: var(--primary-color);
+//         color: #fff;
+//       }
+//     }
+//   }
 
-  .product {
-    flex-wrap: wrap;
-    display: flex;
-    // @include media-breakpoint-up(lg) {
-    //   gap: 1em;
-    // }
+//   .product {
+//     flex-wrap: wrap;
+//     display: flex;
+//     // @include media-breakpoint-up(lg) {
+//     //   gap: 1em;
+//     // }
 
-    .item-box {
-      position: relative;
-      margin: 5px;
-    }
-    .card-product {
-      @include card-product;
-    }
-  }
-}
+//     .item-box {
+//       position: relative;
+//       margin: 5px;
+//     }
+//     .card-product {
+//       @include card-product;
+//     }
+//   }
+// }
