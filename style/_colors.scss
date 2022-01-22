@@ -1,11 +1,100 @@
 // warna
-$primary-color: #f7931e;
-$background-color-primary: #fef4e9;
-$background-color-secondary: #fff9f2;
-$text-color-primary: #432e2d;
-$text-color-secondary: #6b5f5e;
-$icon-color: #98570c;
-$error-color-text: #ee6868;
-$error-color-background: #ffe6e6;
-$border-color: #f7f7f7;
-$white: #fff;
+//primary-color: #f7931e;
+//background-color-primary: #fef4e9;
+// var( --background-color-secondary): #fff9f2;
+// var( --text-color-primary): #432e2d;
+// var( --text-color-secondary): #6b5f5e;
+// $icon-color: #98570c;
+// var( --error-color-text): #ee6868;
+// var( --error-color-background): #ffe6e6;
+// var( --border-color): #f7f7f7;
+// var( --white): #fff;
+
+:root {
+  --primary-color: #f7931e;
+  --background-color-primary: #fcfefe;
+  --background-color-secondary: #fff9f2;
+  --text-color-primary: #432e2d;
+  --text-color-secondary: #6b5f5e;
+  --icon-color: #98570c;
+  --icon-color-deactive: #fbc98f;
+  --error-color-text: #ee6868;
+  --error-color-background: #ffe6e6;
+  --border-color: #f7f7f7;
+  --white: #fff;
+}
+.darkmode {
+  --primary-color: #f7931e;
+  --background-color-primary: #3e3d40;
+  --background-color-secondary: #575759;
+  --text-color-primary: #fff;
+  --text-color-secondary: #dedede;
+  --icon-color: #98570c;
+  --icon-color-deactive: #858488;
+  --error-color-text: #ff8f8f;
+  --error-color-background: #4d4c51;
+  --border-color: #5c5c5c;
+  --white: #fff;
+  transition: all 0.5s ease;
+
+  // navbar
+  .nav-desktop {
+    background-color: var(--background-color-primary);
+    @include media-breakpoint-down(md) {
+      background-color: transparent;
+    }
+    .btn-contact-us {
+      background-color: var(--error-color-background);
+    }
+    .dark-mode-toggle {
+      #moon {
+        display: none;
+      }
+      #sun {
+        display: block;
+      }
+    }
+  }
+  .nav-desktop.scrolled-desktop {
+    background-color: var(--background-color-secondary);
+    box-shadow: 0px 30px 40px rgba(65, 64, 64, 0.2);
+  }
+
+  .nav-mobile {
+    background-color: var(--background-color-secondary);
+    border: 1px solid #5c5c5c;
+    box-shadow: none;
+    box-shadow: 0px 30px 40px rgba(65, 64, 64, 0.2);
+  }
+  // card product
+  .card-product {
+    background-color: var(--background-color-secondary) !important;
+    box-shadow: none !important;
+
+    .btn-card {
+      a {
+        &.btn-lihat-tema {
+          background-color: var(--error-color-background) !important;
+        }
+      }
+    }
+  }
+
+  // faq
+  .card-faq {
+    .card {
+      background-color: var(--background-color-secondary);
+      border: 1px solid var(--border-color);
+      box-shadow: none !important;
+    }
+  }
+
+  // pricelist
+  .section-pricelist {
+    .card {
+      background-color: var(--background-color-secondary);
+      border: 1px solid var(--border-color) !important;
+      box-shadow: none !important;
+    }
+  }
+}

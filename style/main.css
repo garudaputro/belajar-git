@@ -1,7 +1,98 @@
+:root {
+  --primary-color: #f7931e;
+  --background-color-primary: #fcfefe;
+  --background-color-secondary: #fff9f2;
+  --text-color-primary: #432e2d;
+  --text-color-secondary: #6b5f5e;
+  --icon-color: #98570c;
+  --icon-color-deactive: #fbc98f;
+  --error-color-text: #ee6868;
+  --error-color-background: #ffe6e6;
+  --border-color: #f7f7f7;
+  --white: #fff;
+}
+
+.darkmode {
+  --primary-color: #f7931e;
+  --background-color-primary: #3e3d40;
+  --background-color-secondary: #575759;
+  --text-color-primary: #fff;
+  --text-color-secondary: #dedede;
+  --icon-color: #98570c;
+  --icon-color-deactive: #858488;
+  --error-color-text: #ff8f8f;
+  --error-color-background: #4d4c51;
+  --border-color: #5c5c5c;
+  --white: #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.darkmode .nav-desktop {
+  background-color: var(--background-color-primary);
+}
+
+@media (max-width: 767.98px) {
+  .darkmode .nav-desktop {
+    background-color: transparent;
+  }
+}
+
+.darkmode .nav-desktop .btn-contact-us {
+  background-color: var(--error-color-background);
+}
+
+.darkmode .nav-desktop .dark-mode-toggle #moon {
+  display: none;
+}
+
+.darkmode .nav-desktop .dark-mode-toggle #sun {
+  display: block;
+}
+
+.darkmode .nav-desktop.scrolled-desktop {
+  background-color: var(--background-color-secondary);
+  -webkit-box-shadow: 0px 30px 40px rgba(65, 64, 64, 0.2);
+          box-shadow: 0px 30px 40px rgba(65, 64, 64, 0.2);
+}
+
+.darkmode .nav-mobile {
+  background-color: var(--background-color-secondary);
+  border: 1px solid #5c5c5c;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-shadow: 0px 30px 40px rgba(65, 64, 64, 0.2);
+          box-shadow: 0px 30px 40px rgba(65, 64, 64, 0.2);
+}
+
+.darkmode .card-product {
+  background-color: var(--background-color-secondary) !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.darkmode .card-product .btn-card a.btn-lihat-tema {
+  background-color: var(--error-color-background) !important;
+}
+
+.darkmode .card-faq .card {
+  background-color: var(--background-color-secondary);
+  border: 1px solid var(--border-color);
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.darkmode .section-pricelist .card {
+  background-color: var(--background-color-secondary);
+  border: 1px solid var(--border-color) !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 .loader-bg {
   position: fixed;
   z-index: 99999;
-  background: white;
+  background: var(--background-color-primary);
   width: 100%;
   height: 100%;
 }
@@ -120,7 +211,6 @@
 }
 
 #loader body {
-  background: #fff;
   overflow: hidden;
 }
 
@@ -190,14 +280,14 @@
 }
 
 .nav-mobile ul li a svg path {
-  stroke: #fbc98f;
+  fill: var(--icon-color-deactive);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .nav-mobile ul li a svg path:hover {
-  fill: #f7931e;
-  stroke: #f7931e;
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -219,28 +309,53 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 0 0 8px 8px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.nav-desktop a.navbar-brand img.brand {
+@media (max-width: 575.98px) {
+  .nav-desktop {
+    background-color: none !important;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .nav-desktop {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+.nav-desktop a.navbar-brand .brand {
   max-width: 120px;
+  height: 50px;
+}
+
+.nav-desktop a.navbar-brand .brand .dot-logo,
+.nav-desktop a.navbar-brand .brand .text-logo {
+  fill: var(--text-color-primary) !important;
 }
 
 @media (min-width: 992px) {
-  .nav-desktop a.navbar-brand img.brand {
+  .nav-desktop a.navbar-brand .brand {
     max-width: 150px;
   }
 }
 
 .nav-desktop ul li.active-desktop a {
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 .nav-desktop ul li a {
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
   font-size: 14px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -254,18 +369,18 @@
 }
 
 .nav-desktop ul li a:hover {
-  color: #f7931e;
+  color: var(--primary-color);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .nav-desktop ul a.btn-contact-us {
   font-size: 14px;
-  background-color: #fff9f2;
-  margin-left: 10px;
+  background-color: var(--background-color-secondary);
+  margin: 0 10px;
   padding: 0.5em 1.5em;
   border-radius: 8px;
-  color: #f7931e;
+  color: var(--primary-color);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -283,7 +398,7 @@
 
 .nav-desktop ul a.btn-contact-us:hover {
   color: white;
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -292,6 +407,20 @@
   fill: #fff;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+.nav-desktop .dark-mode-toggle {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: 5px;
+}
+
+.nav-desktop .dark-mode-toggle #sun {
+  display: none;
 }
 
 .nav-desktop.scrolled-desktop {
@@ -303,6 +432,16 @@
   z-index: 999;
 }
 
+@media (max-width: 767.98px) {
+  .nav-desktop.scrolled-desktop {
+    background-color: none !important;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
 .nav-mobile ul li.active,
 .nav-desktop ul li.active {
   -webkit-transition: 0.3s;
@@ -311,13 +450,13 @@
 
 .nav-mobile ul li.active a,
 .nav-desktop ul li.active a {
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 .nav-mobile ul li.active a svg path,
 .nav-desktop ul li.active a svg path {
-  fill: #f7931e;
-  stroke: #f7931e;
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
 }
 
 * {
@@ -333,7 +472,9 @@
 }
 
 body {
-  background-color: #fcfefe;
+  background-color: var(--background-color-primary);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 body:before {
@@ -364,14 +505,14 @@ body.offcanvas-menu:before {
 }
 
 .owl-dots .owl-dot.active span {
-  background: #f7931e !important;
+  background: var(--primary-color) !important;
   opacity: 1;
   padding: 2px 15px;
 }
 
 .owl-dots .owl-dot span {
   background: transparent !important;
-  border: 1px solid #f7931e !important;
+  border: 1px solid var(--primary-color) !important;
   opacity: 0.3;
 }
 
@@ -384,7 +525,7 @@ section .header-text h3 {
   font-size: 20px;
   line-height: 30px;
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
   position: relative;
   z-index: 2;
   font-weight: 500;
@@ -397,7 +538,7 @@ section .header-text h3 {
 }
 
 section .header-text h3 span {
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 section .sub-header p {
@@ -406,11 +547,11 @@ section .sub-header p {
   line-height: 21px;
   text-align: center;
   text-transform: lowercase;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
 }
 
 .bg-top {
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   border-radius: 0 0 24px 24px;
   height: 14em;
   width: 100%;
@@ -450,7 +591,7 @@ section .sub-header p {
 .bg-top .text-headline h1 {
   font-weight: 600;
   font-size: 22px;
-  color: #fff;
+  color: var(--white);
   text-transform: capitalize;
 }
 
@@ -463,7 +604,7 @@ section .sub-header p {
 
 .bg-top .text-headline p {
   font-size: 14px;
-  color: #fff;
+  color: var(--white);
   padding: 0 1em;
 }
 
@@ -531,7 +672,7 @@ section .sub-header p {
 .header-text h3 {
   text-transform: capitalize;
   font-size: 20px;
-  color: #432e2d;
+  color: var(--text-color-primary);
 }
 
 @media (min-width: 768px) {
@@ -542,7 +683,7 @@ section .sub-header p {
 
 footer.section-footer {
   margin-top: 100px;
-  background-color: #fff9f2;
+  background-color: var(--background-color-secondary);
   padding: 2em 2em 7em 2em;
   border-radius: 24px 24px 0 0;
   display: relative;
@@ -566,18 +707,18 @@ footer.section-footer .text-ajakan h1 {
   font-size: 20px;
   line-height: 30px;
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin-bottom: 1em;
 }
 
 footer.section-footer .text-ajakan .btn-cta-primary a {
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   border-radius: 8px;
   text-align: center;
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
-  color: #fff;
+  color: var(--white);
 }
 
 @media (max-width: 575.98px) {
@@ -623,7 +764,7 @@ footer.section-footer .services {
 footer.section-footer .services .row h4 {
   font-size: 16px;
   line-height: 27px;
-  color: #432e2d;
+  color: var(--text-color-primary);
   font-weight: 600;
   text-transform: lowercase;
 }
@@ -631,7 +772,7 @@ footer.section-footer .services .row h4 {
 footer.section-footer .services .row a {
   font-size: 14px;
   line-height: 21px;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
   margin-bottom: 0;
   font-weight: 400;
   text-transform: lowercase;
@@ -667,7 +808,7 @@ footer.section-footer .services .row img {
 
 @media (max-width: 575.98px) {
   .hero-section {
-    margin-top: 50px;
+    margin-top: 100px;
   }
 }
 
@@ -704,7 +845,7 @@ footer.section-footer .services .row img {
   font-weight: 600;
   font-size: 32px;
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin-bottom: 10px;
 }
 
@@ -727,7 +868,7 @@ footer.section-footer .services .row img {
 }
 
 .hero-section .left .headline h1 span {
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 .hero-section .left .headline p {
@@ -736,7 +877,7 @@ footer.section-footer .services .row img {
   line-height: 18px;
   text-transform: lowercase;
   margin-top: 10px;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
 }
 
 @media (max-width: 575.98px) {
@@ -762,10 +903,10 @@ footer.section-footer .services .row img {
   padding: 1.1em 0;
   border-radius: 12px;
   text-transform: capitalize;
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   border: none;
   letter-spacing: 1px;
-  color: #fff;
+  color: var(--white);
 }
 
 @media (max-width: 575.98px) {
@@ -786,7 +927,7 @@ footer.section-footer .services .row img {
 
 .why-us-section {
   margin-bottom: 100px;
-  background-color: #fff9f2;
+  background-color: var(--background-color-secondary);
   padding: 2em 2em 4em 2em;
   border-radius: 24px;
 }
@@ -826,7 +967,7 @@ footer.section-footer .services .row img {
   font-size: 22px;
   line-height: 27px;
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin-bottom: 5px;
 }
 
@@ -835,7 +976,7 @@ footer.section-footer .services .row img {
   font-size: 14px;
   line-height: 18px;
   text-transform: lowercase;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
 }
 
 section.section-our-way .our-way {
@@ -891,13 +1032,13 @@ section.section-our-way .our-way .desc {
 
 section.section-our-way .our-way .desc h4 {
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
   font-weight: 500;
 }
 
 section.section-our-way .our-way .desc p {
   font-size: 14px;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
   margin-bottom: 0;
 }
 
@@ -938,7 +1079,7 @@ section.section-our-way .our-way .desc p {
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #f7931e;
+  background: var(--primary-color);
   border-radius: 8px;
 }
 
@@ -949,7 +1090,7 @@ section.section-our-way .our-way .desc p {
   top: 0;
   bottom: 0;
   margin: auto;
-  background: #fff;
+  background: var(--white);
 }
 
 .section-our-services .btn-view-more a.see-more .circle .icon.arrow {
@@ -984,7 +1125,7 @@ section.section-our-way .our-way .desc p {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #432e2d;
+  color: var(--text-color-primary);
   font-weight: 500;
   line-height: 1.6;
   text-align: center;
@@ -996,13 +1137,13 @@ section.section-our-way .our-way .desc p {
 }
 
 .section-our-services .btn-view-more a:hover .circle .icon.arrow {
-  background: #fff;
+  background: var(--white);
   -webkit-transform: translate(1rem, 0);
           transform: translate(1rem, 0);
 }
 
 .section-our-services .btn-view-more a:hover .button-text {
-  color: #fff;
+  color: var(--white);
 }
 
 .section-our-services .service {
@@ -1033,32 +1174,11 @@ section.section-our-way .our-way .desc p {
   }
 }
 
-.section-our-services .service.video-invitation .comming-soon, .section-our-services .service.design-invitation .comming-soon {
-  margin-top: 25px;
-  height: 250px;
-  width: 340px;
-  background-color: #fff9f2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 16px;
-}
-
-.section-our-services .service.video-invitation .comming-soon h3, .section-our-services .service.design-invitation .comming-soon h3 {
-  color: #f7931e;
-}
-
 .section-our-services .service .card-product {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #f2f2f2;
-  background-color: #fff;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
   -webkit-box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
           box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
   border-radius: 15px;
@@ -1111,14 +1231,14 @@ section.section-our-way .our-way .desc p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
 }
 
 .section-our-services .service .card-product .card-body .nama-tema h3 {
   text-transform: capitalize;
   font-weight: 500;
   font-size: 25px;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin-bottom: 0;
 }
 
@@ -1139,8 +1259,8 @@ section.section-our-way .our-way .desc p {
   text-align: center;
   padding: 5px 10px;
   border-radius: 8px;
-  color: #ee6868;
-  background-color: #ffe6e6;
+  color: var(--error-color-text);
+  background-color: var(--error-color-background);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1159,7 +1279,7 @@ section.section-our-way .our-way .desc p {
   font-size: 22px;
   line-height: 27px;
   text-transform: capitalize;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 .section-our-services .service .card-product .card-body .harga span {
@@ -1167,7 +1287,6 @@ section.section-our-way .our-way .desc p {
   margin-top: 3px;
   font-size: 14px;
   line-height: 18px;
-  /* identical to box height */
   text-align: center;
   letter-spacing: 0.05em;
   -webkit-text-decoration-line: line-through;
@@ -1180,7 +1299,7 @@ section.section-our-way .our-way .desc p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .section-our-services .service .card-product .card-body .btn-card a {
@@ -1198,7 +1317,7 @@ section.section-our-way .our-way .desc p {
 .section-our-services .service .card-product .card-body .btn-card a.btn-pilih-tema {
   width: 50%;
   margin-right: 10px;
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   color: #fff;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1215,14 +1334,14 @@ section.section-our-way .our-way .desc p {
 
 .section-our-services .service .card-product .card-body .btn-card a.btn-lihat-tema {
   width: 50%;
-  background-color: #fff9f2;
+  background-color: var(--background-color-secondary);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 @media (min-width: 768px) {
@@ -1233,6 +1352,7 @@ section.section-our-way .our-way .desc p {
 
 .section-our-services .service .left .header-text {
   text-align: center;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -1248,7 +1368,7 @@ section.section-our-way .our-way .desc p {
   font-size: 18px;
   line-height: 37px;
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin-bottom: 0;
 }
 
@@ -1258,7 +1378,7 @@ section.section-our-way .our-way .desc p {
   font-weight: normal;
   font-size: 14px;
   text-transform: lowercase;
-  color: #858585;
+  color: var(--text-color-secondary);
 }
 
 .section-our-services .service .right .owl-three {
@@ -1319,7 +1439,7 @@ section.section-our-way .our-way .desc p {
 
 section.section-testimoni {
   margin-top: 100px;
-  background-color: #fff9f2;
+  background-color: var(--background-color-secondary);
   padding: 2em;
   border-radius: 24px;
   text-align: center;
@@ -1327,7 +1447,7 @@ section.section-testimoni {
 
 section.section-testimoni .header-text h3 {
   text-transform: capitalize;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 section.section-testimoni .content {
@@ -1344,7 +1464,7 @@ section.section-testimoni .content h5 {
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin: 10px 0;
 }
 
@@ -1353,7 +1473,7 @@ section.section-testimoni .content p {
   line-height: 18px;
   text-align: center;
   text-transform: capitalize;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
 }
 
 section.section-testimoni .content::after {
@@ -1410,11 +1530,11 @@ section.section-faq .card-faq .card {
           box-shadow: 0px 5px 5px rgba(216, 216, 216, 0.05);
   border-radius: 15px;
   margin-bottom: 10px;
-  border: 1px solid rgba(245, 245, 245, 0.8);
+  border: 1px solid var(--border-color);
 }
 
 section.section-faq .card-faq .card a {
-  color: #432e2d;
+  color: var(--text-color-primary);
   font-size: 14px;
   padding: 1em;
 }
@@ -1423,7 +1543,7 @@ section.section-faq .card-faq .card .card-body p {
   font-size: 14px;
   line-height: 21px;
   text-transform: lowercase;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
 }
 
 section.our-offer {
@@ -1436,7 +1556,7 @@ section.our-offer h3 {
 
 section.our-offer .right .offer .why-us {
   margin-top: 30px;
-  background-color: #fff9f2;
+  background-color: var(--background-color-secondary);
   padding: 30px;
   border-radius: 40px;
   min-height: 230px;
@@ -1460,7 +1580,7 @@ section.our-offer .right .offer .why-us .desc h4 {
   font-size: 22px;
   line-height: 27px;
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin-bottom: 5px;
 }
 
@@ -1469,7 +1589,7 @@ section.our-offer .right .offer .why-us .desc p {
   font-size: 14px;
   line-height: 20px;
   text-transform: lowercase;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
 }
 
 section.section-pricelist {
@@ -1518,7 +1638,7 @@ section.section-pricelist .row .card .card-body {
 }
 
 section.section-pricelist .row .card .card-body span.diminati {
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   border-radius: 0 0 15px 15px;
   padding: 5px 20px;
   color: white;
@@ -1556,7 +1676,7 @@ section.section-pricelist .row .card .card-body .price h3 {
   font-size: 32px;
   line-height: 27px;
   text-transform: capitalize;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 section.section-pricelist .row .card .card-body .price h3 span {
@@ -1564,7 +1684,7 @@ section.section-pricelist .row .card .card-body .price h3 span {
   font-size: 14px;
   line-height: 15px;
   letter-spacing: 0.05em;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
 }
 
 section.section-pricelist .row .card .card-body hr {
@@ -1616,10 +1736,10 @@ section.wedding-themes .btn-filter {
 
 section.wedding-themes .btn-filter li {
   list-style: none;
-  background: #fff9f2;
+  background: var(--background-color-secondary);
   margin: 5px;
   padding: 8px 20px;
-  color: #f7931e;
+  color: var(--primary-color);
   letter-spacing: 1px;
   cursor: pointer;
   font-size: 14px;
@@ -1632,7 +1752,7 @@ section.wedding-themes .btn-filter li {
 }
 
 section.wedding-themes .btn-filter li.active {
-  background: #f7931e;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -1652,8 +1772,8 @@ section.wedding-themes .product .item-box {
 section.wedding-themes .product .card-product {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #f2f2f2;
-  background-color: #fff;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
   -webkit-box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
           box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
   border-radius: 15px;
@@ -1706,14 +1826,14 @@ section.wedding-themes .product .card-product .card-body .nama-tema {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
 }
 
 section.wedding-themes .product .card-product .card-body .nama-tema h3 {
   text-transform: capitalize;
   font-weight: 500;
   font-size: 25px;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin-bottom: 0;
 }
 
@@ -1734,8 +1854,8 @@ section.wedding-themes .product .card-product .card-body .nama-tema span {
   text-align: center;
   padding: 5px 10px;
   border-radius: 8px;
-  color: #ee6868;
-  background-color: #ffe6e6;
+  color: var(--error-color-text);
+  background-color: var(--error-color-background);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1754,7 +1874,7 @@ section.wedding-themes .product .card-product .card-body .harga h3 {
   font-size: 22px;
   line-height: 27px;
   text-transform: capitalize;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 section.wedding-themes .product .card-product .card-body .harga span {
@@ -1762,7 +1882,6 @@ section.wedding-themes .product .card-product .card-body .harga span {
   margin-top: 3px;
   font-size: 14px;
   line-height: 18px;
-  /* identical to box height */
   text-align: center;
   letter-spacing: 0.05em;
   -webkit-text-decoration-line: line-through;
@@ -1775,7 +1894,7 @@ section.wedding-themes .product .card-product .card-body .btn-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 section.wedding-themes .product .card-product .card-body .btn-card a {
@@ -1793,7 +1912,7 @@ section.wedding-themes .product .card-product .card-body .btn-card a {
 section.wedding-themes .product .card-product .card-body .btn-card a.btn-pilih-tema {
   width: 50%;
   margin-right: 10px;
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   color: #fff;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1810,14 +1929,14 @@ section.wedding-themes .product .card-product .card-body .btn-card a.btn-pilih-t
 
 section.wedding-themes .product .card-product .card-body .btn-card a.btn-lihat-tema {
   width: 50%;
-  background-color: #fff9f2;
+  background-color: var(--background-color-secondary);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 section.our-offer {
@@ -1830,7 +1949,7 @@ section.our-offer h3 {
 
 section.our-offer .right .offer .why-us {
   margin-top: 30px;
-  background-color: #fff9f2;
+  background-color: var(--background-color-secondary);
   padding: 30px;
   border-radius: 40px;
   min-height: 230px;
@@ -1854,7 +1973,7 @@ section.our-offer .right .offer .why-us .desc h4 {
   font-size: 22px;
   line-height: 27px;
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin-bottom: 5px;
 }
 
@@ -1863,7 +1982,7 @@ section.our-offer .right .offer .why-us .desc p {
   font-size: 14px;
   line-height: 20px;
   text-transform: lowercase;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
 }
 
 section.section-pricelist {
@@ -1912,7 +2031,7 @@ section.section-pricelist .row .card .card-body {
 }
 
 section.section-pricelist .row .card .card-body span.diminati {
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   border-radius: 0 0 15px 15px;
   padding: 5px 20px;
   color: white;
@@ -1950,7 +2069,7 @@ section.section-pricelist .row .card .card-body .price h3 {
   font-size: 32px;
   line-height: 27px;
   text-transform: capitalize;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 section.section-pricelist .row .card .card-body .price h3 span {
@@ -1958,7 +2077,7 @@ section.section-pricelist .row .card .card-body .price h3 span {
   font-size: 14px;
   line-height: 15px;
   letter-spacing: 0.05em;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
 }
 
 section.section-pricelist .row .card .card-body hr {
@@ -2014,10 +2133,10 @@ section.wedding-themes ul {
 
 section.wedding-themes ul li {
   list-style: none;
-  background: #fff9f2;
+  background: var(--background-color-secondary);
   margin: 5px;
   padding: 8px 20px;
-  color: #f7931e;
+  color: var(--primary-color);
   letter-spacing: 1px;
   cursor: pointer;
   font-size: 14px;
@@ -2030,7 +2149,7 @@ section.wedding-themes ul li {
 }
 
 section.wedding-themes ul li.active {
-  background: #f7931e;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -2050,8 +2169,8 @@ section.wedding-themes .product .item-box {
 section.wedding-themes .product .card-product {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #f2f2f2;
-  background-color: #fff;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
   -webkit-box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
           box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
   border-radius: 15px;
@@ -2104,14 +2223,14 @@ section.wedding-themes .product .card-product .card-body .nama-tema {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
 }
 
 section.wedding-themes .product .card-product .card-body .nama-tema h3 {
   text-transform: capitalize;
   font-weight: 500;
   font-size: 25px;
-  color: #432e2d;
+  color: var(--text-color-primary);
   margin-bottom: 0;
 }
 
@@ -2132,8 +2251,8 @@ section.wedding-themes .product .card-product .card-body .nama-tema span {
   text-align: center;
   padding: 5px 10px;
   border-radius: 8px;
-  color: #ee6868;
-  background-color: #ffe6e6;
+  color: var(--error-color-text);
+  background-color: var(--error-color-background);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -2152,7 +2271,7 @@ section.wedding-themes .product .card-product .card-body .harga h3 {
   font-size: 22px;
   line-height: 27px;
   text-transform: capitalize;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 section.wedding-themes .product .card-product .card-body .harga span {
@@ -2160,7 +2279,6 @@ section.wedding-themes .product .card-product .card-body .harga span {
   margin-top: 3px;
   font-size: 14px;
   line-height: 18px;
-  /* identical to box height */
   text-align: center;
   letter-spacing: 0.05em;
   -webkit-text-decoration-line: line-through;
@@ -2173,7 +2291,7 @@ section.wedding-themes .product .card-product .card-body .btn-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 section.wedding-themes .product .card-product .card-body .btn-card a {
@@ -2191,7 +2309,7 @@ section.wedding-themes .product .card-product .card-body .btn-card a {
 section.wedding-themes .product .card-product .card-body .btn-card a.btn-pilih-tema {
   width: 50%;
   margin-right: 10px;
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   color: #fff;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2208,19 +2326,19 @@ section.wedding-themes .product .card-product .card-body .btn-card a.btn-pilih-t
 
 section.wedding-themes .product .card-product .card-body .btn-card a.btn-lihat-tema {
   width: 50%;
-  background-color: #fff9f2;
+  background-color: var(--background-color-secondary);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #f7931e;
+  color: var(--primary-color);
 }
 
 section.wedding-themes footer.section-footer {
   margin-top: 8em;
-  background-color: #fff9f2;
+  background-color: var(--background-color-secondary);
   padding: 4em 2em;
   border-radius: 40px 40px 0 0;
   position: relative;
@@ -2247,17 +2365,17 @@ section.wedding-themes footer.section-footer .text-ajakan h1 {
   font-size: 20px;
   line-height: 30px;
   text-transform: capitalize;
-  color: #432e2d;
+  color: var(--text-color-primary);
 }
 
 section.wedding-themes footer.section-footer .text-ajakan .btn-cta-primary a {
-  background-color: #f7931e;
+  background-color: var(--primary-color);
   border-radius: 8px;
   text-align: center;
   font-size: 16px;
   line-height: 24px;
   text-transform: capitalize;
-  color: #fff;
+  color: var(--white);
 }
 
 @media (max-width: 575.98px) {
@@ -2286,7 +2404,7 @@ section.wedding-themes footer.section-footer .services ul {
 section.wedding-themes footer.section-footer .services ul li h4 {
   font-size: 16px;
   line-height: 27px;
-  color: #432e2d;
+  color: var(--text-color-primary);
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -2294,7 +2412,7 @@ section.wedding-themes footer.section-footer .services ul li h4 {
 section.wedding-themes footer.section-footer .services ul li a {
   font-size: 14px;
   line-height: 21px;
-  color: #6b5f5e;
+  color: var(--text-color-secondary);
   margin-bottom: 0;
   font-weight: 400;
   text-transform: lowercase;

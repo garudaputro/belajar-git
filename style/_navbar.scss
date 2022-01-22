@@ -35,12 +35,12 @@
           stroke-width: 0.3;
 
           path {
-            stroke: #fbc98f;
+            fill: var(--icon-color-deactive);
             transition: all 0.2s ease-in-out;
 
             &:hover {
-              fill: $primary-color;
-              stroke: $primary-color;
+              fill: var(--primary-color);
+              stroke: var(--primary-color);
               transition: all 0.2s ease-in-out;
             }
           }
@@ -50,8 +50,8 @@
       //   transition: 0.3s;
       //   svg {
       //     path {
-      //       fill: $primary-color;
-      //       stroke: $primary-color;
+      //       fill:var( --primary-color);
+      //       stroke:var( --primary-color);
       //     }
       //   }
       // }
@@ -72,12 +72,29 @@
   z-index: 999;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 0 0 8px 8px;
   transition: all 0.3s ease-in-out;
+  @include media-breakpoint-down(sm) {
+    background-color: none !important;
+    box-shadow: none;
+    transition: none;
+  }
+  @include media-breakpoint-down(md) {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    padding: 0;
+  }
   a.navbar-brand {
-    img.brand {
+    .brand {
       max-width: 120px;
+      height: 50px;
+      .dot-logo,
+      .text-logo {
+        fill: var(--text-color-primary) !important;
+      }
+
       @include media-breakpoint-up(lg) {
         max-width: 150px;
       }
@@ -88,11 +105,11 @@
     li {
       &.active-desktop {
         a {
-          color: $primary-color;
+          color: var(--primary-color);
         }
       }
       a {
-        color: $text-color-secondary;
+        color: var(--text-color-secondary);
         font-size: 14px;
         transition: all 0.2s ease-in-out;
         text-transform: capitalize;
@@ -100,7 +117,7 @@
           font-size: 16px;
         }
         &:hover {
-          color: $primary-color;
+          color: var(--primary-color);
           transition: all 0.2s ease-in-out;
         }
       }
@@ -108,12 +125,12 @@
 
     a.btn-contact-us {
       font-size: 14px;
-      background-color: $background-color-secondary;
+      background-color: var(--background-color-secondary);
 
-      margin-left: 10px;
+      margin: 0 10px;
       padding: 0.5em 1.5em;
       border-radius: 8px;
-      color: $primary-color;
+      color: var(--primary-color);
       transition: all 0.2s ease-in-out;
       @include media-breakpoint-up(lg) {
         font-size: 18px;
@@ -124,13 +141,22 @@
       }
       &:hover {
         color: white;
-        background-color: $primary-color;
+        background-color: var(--primary-color);
         transition: all 0.2s ease-in-out;
         svg path {
           fill: #fff;
           transition: all 0.2s ease-in-out;
         }
       }
+    }
+  }
+  .dark-mode-toggle {
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    margin-left: 5px;
+    #sun {
+      display: none;
     }
   }
 }
@@ -140,6 +166,11 @@
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 30px 40px rgba(88, 88, 88, 0.1);
   z-index: 999;
+  @include media-breakpoint-down(md) {
+    background-color: none !important;
+    box-shadow: none;
+    transition: none;
+  }
 }
 
 .nav-mobile,
@@ -149,10 +180,10 @@
       &.active {
         transition: 0.3s;
         a {
-          color: $primary-color;
+          color: var(--primary-color);
           svg path {
-            fill: $primary-color;
-            stroke: $primary-color;
+            fill: var(--primary-color);
+            stroke: var(--primary-color);
           }
         }
       }

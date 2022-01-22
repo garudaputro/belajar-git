@@ -8,7 +8,7 @@ section.our-offer {
     .offer {
       .why-us {
         margin-top: 30px;
-        background-color: $background-color-secondary;
+        background-color: var(--background-color-secondary);
         padding: 30px;
         border-radius: 40px;
         min-height: 230px;
@@ -26,7 +26,7 @@ section.our-offer {
             font-size: 22px;
             line-height: 27px;
             text-transform: capitalize;
-            color: $text-color-primary;
+            color: var(--text-color-primary);
             margin-bottom: 5px;
           }
           p {
@@ -34,7 +34,7 @@ section.our-offer {
             font-size: 14px;
             line-height: 20px;
             text-transform: lowercase;
-            color: $text-color-secondary;
+            color: var(--text-color-secondary);
           }
         }
       }
@@ -72,7 +72,7 @@ section.section-pricelist {
       .card-body {
         padding: 1.5em 1em;
         span.diminati {
-          background-color: $primary-color;
+          background-color: var(--primary-color);
           border-radius: 0 0 15px 15px;
           padding: 5px 20px;
           color: white;
@@ -105,14 +105,14 @@ section.section-pricelist {
             font-size: 32px;
             line-height: 27px;
             text-transform: capitalize;
-            color: $primary-color;
+            color: var(--primary-color);
 
             span {
               font-weight: 400;
               font-size: 14px;
               line-height: 15px;
               letter-spacing: 0.05em;
-              color: $text-color-secondary;
+              color: var(--text-color-secondary);
             }
           }
         }
@@ -169,10 +169,10 @@ section.wedding-themes {
 
     li {
       list-style: none;
-      background: $background-color-secondary;
+      background: var(--background-color-secondary);
       margin: 5px;
       padding: 8px 20px;
-      color: $primary-color;
+      color: var(--primary-color);
       letter-spacing: 1px;
       cursor: pointer;
       font-size: 14px;
@@ -183,7 +183,7 @@ section.wedding-themes {
       text-transform: capitalize;
 
       &.active {
-        background: $primary-color;
+        background: var(--primary-color);
         color: #fff;
       }
     }

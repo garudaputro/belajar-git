@@ -1,7 +1,7 @@
 @mixin card-product {
   box-sizing: border-box;
-  border: 1px solid #f2f2f2;
-  background-color: $white;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
   box-shadow: 0px 5px 10px rgba(196, 196, 196, 0.1);
   border-radius: 15px;
   max-width: 350px;
@@ -38,13 +38,13 @@
     .nama-tema {
       display: flex;
       justify-content: space-between;
-      margin: 20px 0;
+      margin: 20px 0 10px 0;
 
       h3 {
         text-transform: capitalize;
         font-weight: 500;
         font-size: 25px;
-        color: #432e2d;
+        color: var(--text-color-primary);
         margin-bottom: 0;
         @include media-breakpoint-up(md) {
           font-size: 20px;
@@ -58,8 +58,8 @@
         text-align: center;
         padding: 5px 10px;
         border-radius: 8px;
-        color: $error-color-text;
-        background-color: $error-color-background;
+        color: var(--error-color-text);
+        background-color: var(--error-color-background);
         align-self: center;
         font-size: 14px;
         font-weight: 600;
@@ -72,28 +72,23 @@
         font-size: 22px;
         line-height: 27px;
         text-transform: capitalize;
-        color: #f7931e;
+        color: var(--primary-color);
       }
       span {
         margin-left: 10px;
         margin-top: 3px;
         font-size: 14px;
         line-height: 18px;
-        /* identical to box height */
-
         text-align: center;
         letter-spacing: 0.05em;
         text-decoration-line: line-through;
         text-transform: capitalize;
-
         color: #b3b0b0;
       }
     }
     .btn-card {
       display: flex;
-
-      margin-top: 5px;
-
+      margin-top: 15px;
       a {
         padding: 10px 0;
         font-size: 14px;
@@ -104,7 +99,7 @@
         &.btn-pilih-tema {
           width: 50%;
           margin-right: 10px;
-          background-color: $primary-color;
+          background-color: var(--primary-color);
           color: #fff;
           justify-content: center;
           align-items: center;
@@ -114,10 +109,10 @@
         }
         &.btn-lihat-tema {
           width: 50%;
-          background-color: $background-color-secondary;
+          background-color: var(--background-color-secondary);
           justify-content: center;
           display: flex;
-          color: $primary-color;
+          color: var(--primary-color);
         }
       }
     }

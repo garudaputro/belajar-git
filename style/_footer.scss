@@ -1,7 +1,7 @@
 // footer
 footer.section-footer {
   margin-top: 100px;
-  background-color: $background-color-secondary;
+  background-color: var(--background-color-secondary);
   padding: 2em 2em 7em 2em;
   border-radius: 24px 24px 0 0;
   display: relative;
@@ -19,7 +19,7 @@ footer.section-footer {
       font-size: 20px;
       line-height: 30px;
       text-transform: capitalize;
-      color: $text-color-primary;
+      color: var(--text-color-primary);
       margin-bottom: 1em;
     }
     .btn-cta-primary {
@@ -44,7 +44,7 @@ footer.section-footer {
       h4 {
         font-size: 16px;
         line-height: 27px;
-        color: $text-color-primary;
+        color: var(--text-color-primary);
         font-weight: 600;
 
         text-transform: lowercase;
@@ -52,7 +52,7 @@ footer.section-footer {
       a {
         font-size: 14px;
         line-height: 21px;
-        color: $text-color-secondary;
+        color: var(--text-color-secondary);
         margin-bottom: 0;
         font-weight: 400;
 

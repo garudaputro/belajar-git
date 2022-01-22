@@ -9,7 +9,8 @@
   }
 }
 body {
-  background-color: #fcfefe;
+  background-color: var(--background-color-primary);
+  transition: all 0.5s ease;
   &:before {
     content: "";
     position: absolute;
@@ -47,7 +48,7 @@ body {
   right: 0;
   .owl-dot.active {
     span {
-      background: $primary-color !important;
+      background: var(--primary-color) !important;
       opacity: 1;
       padding: 2px 15px;
     }
@@ -56,7 +57,7 @@ body {
     span {
       background: transparent !important;
 
-      border: 1px solid $primary-color !important;
+      border: 1px solid var(--primary-color) !important;
       opacity: 0.3;
     }
   }
@@ -71,7 +72,7 @@ section {
       font-size: 20px;
       line-height: 30px;
       text-transform: capitalize;
-      color: $text-color-primary;
+      color: var(--text-color-primary);
       position: relative;
       z-index: 2;
       font-weight: 500;
@@ -79,7 +80,7 @@ section {
         font-size: 28px;
       }
       span {
-        color: $primary-color;
+        color: var(--primary-color);
       }
     }
   }
@@ -90,13 +91,13 @@ section {
       line-height: 21px;
       text-align: center;
       text-transform: lowercase;
-      color: $text-color-secondary;
+      color: var(--text-color-secondary);
     }
   }
 }
 
 .bg-top {
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   border-radius: 0 0 24px 24px;
   height: 14em;
   width: 100%;
@@ -120,7 +121,7 @@ section {
     h1 {
       font-weight: 600;
       font-size: 22px;
-      color: $white;
+      color: var(--white);
       text-transform: capitalize;
       @include media-breakpoint-up(md) {
         font-size: 32px;
@@ -129,7 +130,7 @@ section {
     }
     p {
       font-size: 14px;
-      color: $white;
+      color: var(--white);
       padding: 0 1em;
       @include media-breakpoint-up(md) {
         font-size: 18px;
@@ -178,7 +179,7 @@ section {
   h3 {
     text-transform: capitalize;
     font-size: 20px;
-    color: $text-color-primary;
+    color: var(--text-color-primary);
     @include media-breakpoint-up(md) {
       font-size: 32px;
     }

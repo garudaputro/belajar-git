@@ -2,10 +2,10 @@
   padding: 1.1em 0;
   border-radius: 12px;
   text-transform: capitalize;
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   border: none;
   letter-spacing: 1px;
-  color: $white;
+  color: var(--white);
   @include media-breakpoint-down(sm) {
     display: block;
   }
@@ -20,13 +20,13 @@
 @mixin btn-cta-primary {
   a {
     // padding: 0.7em 2em;
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     border-radius: 8px;
     text-align: center;
     font-size: 16px;
     line-height: 24px;
     text-transform: capitalize;
-    color: $white;
+    color: var(--white);
     @include media-breakpoint-down(sm) {
       padding: 0.7em 1.3em;
     }
@@ -41,11 +41,11 @@
 
 @mixin btn-cta-secondary {
   a {
-    background-color: $background-color-secondary;
+    background-color: var(--background-color-secondary);
     text-transform: capitalize;
     // padding: 0.7em 2em;
     border-radius: 8px;
-    color: $primary-color;
+    color: var(--primary-color);
     margin-right: 10px;
     text-decoration: none;
     transition: all ease-in-out 0.3s;
@@ -60,7 +60,7 @@
     }
 
     &:hover {
-      background-color: $primary-color;
+      background-color: var(--primary-color);
       color: white;
       transition: all ease-in-out 0.3s;
     }
@@ -90,7 +90,7 @@
         margin: 0;
         width: 3rem;
         height: 3rem;
-        background: $primary-color;
+        background: var(--primary-color);
         border-radius: 8px;
         .icon {
           @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
@@ -98,7 +98,7 @@
           top: 0;
           bottom: 0;
           margin: auto;
-          background: $white;
+          background: var(--white);
           &.arrow {
             @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
             left: 0.625rem;
@@ -128,7 +128,7 @@
         bottom: 0;
         padding: 0.75rem 0;
         margin: 0 0 0 1.85rem;
-        color: $text-color-primary;
+        color: var(--text-color-primary);
         font-weight: 500;
         line-height: 1.6;
         text-align: center;
@@ -140,13 +140,13 @@
         width: 100%;
         .icon {
           &.arrow {
-            background: $white;
+            background: var(--white);
             transform: translate(1rem, 0);
           }
         }
       }
       .button-text {
-        color: $white;
+        color: var(--white);
       }
     }
   }
